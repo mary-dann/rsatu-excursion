@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@import "./base.css";
+
+@import "./blocks/header.css";
+
+@theme {
+
+  --font-sans: "Disket Mono", monospace;
+}

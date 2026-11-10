@@ -1,0 +1,41 @@
+/* Disket Mono — единственный шрифт */
+@font-face {
+  font-family: 'Disket Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/DisketMono.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Disket Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/DisketMono-Bold.woff2') format('woff2');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Disket Mono', monospace;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
