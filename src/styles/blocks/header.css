@@ -1,0 +1,160 @@
+.header {
+    @apply sticky top-0 z-50 bg-white border-b border-brand-dark/10 shadow-sm;
+}
+
+/* Верхняя полоса */
+.header__top-bar {
+    @apply bg-brand-blue text-white;
+}
+
+.header__slogan {
+    @apply m-0 mx-auto max-w-7xl px-6 py-2 text-center text-[13px] font-medium leading-snug tracking-wide;
+}
+
+.header__container {
+    @apply mx-auto flex max-w-7xl items-center justify-between gap-8 px-6 min-h-[72px];
+}
+
+.header__logo {
+    @apply inline-flex shrink-0 items-center no-underline;
+}
+
+.header__logo-img {
+    @apply block h-11 w-auto;
+}
+
+/* Навигация (десктоп) */
+.header__nav {
+    @apply flex flex-1 justify-center;
+}
+
+.header__menu {
+    @apply m-0 flex list-none items-center gap-2 p-0;
+}
+
+.header__menu-item {
+    @apply relative;
+}
+
+.header__menu-link {
+    @apply inline-block whitespace-nowrap rounded-lg px-3.5 py-2.5 text-[15px] font-medium text-brand-dark no-underline transition-colors duration-200;
+    @apply hover:bg-brand-light hover:text-brand-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue;
+}
+
+/* CTA-кнопки */
+.header__cta {
+    @apply shrink-0 items-center justify-center whitespace-nowrap rounded-lg bg-brand-blue px-5 py-2.5 text-[15px] font-semibold leading-tight text-white no-underline shadow-md shadow-brand-blue/25 transition-all duration-200;
+    @apply hover:bg-brand-dark active:translate-y-px active:shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue;
+}
+
+/* Мобильная CTA — по умолчанию скрыта, показывается только внутри открытого меню */
+.header__mobile-cta {
+    @apply mt-4 hidden w-full justify-center;
+}
+
+/* Бургер */
+.header__burger {
+    @apply hidden h-11 w-11 shrink-0 items-center justify-center rounded-lg border-0 bg-transparent p-0 cursor-pointer text-brand-dark transition-colors duration-200;
+    @apply hover:bg-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue;
+}
+
+.header__burger-icon {
+    @apply relative block h-0.5 w-6 bg-current transition-colors duration-200;
+}
+
+.header__burger-icon::before,
+.header__burger-icon::after {
+    content: "";
+    @apply absolute left-0 block h-0.5 w-6 bg-current transition-transform duration-200;
+}
+
+.header__burger-icon::before {
+    @apply -top-2;
+}
+
+.header__burger-icon::after {
+    @apply top-2;
+}
+
+/* Состояние "открыто" — крестик */
+.header__burger[aria-expanded="true"] .header__burger-icon {
+    @apply bg-transparent;
+}
+
+.header__burger[aria-expanded="true"] .header__burger-icon::before {
+    @apply top-0 rotate-45;
+}
+
+.header__burger[aria-expanded="true"] .header__burger-icon::after {
+    @apply top-0 -rotate-45;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .header__container {
+        @apply gap-4;
+    }
+    .header__menu {
+        @apply gap-1;
+    }
+    .header__menu-link {
+        @apply px-2.5 py-2 text-sm;
+    }
+}
+
+@media (max-width: 860px) {
+    .header__container {
+        @apply min-h-[64px];
+    }
+
+    .header__burger {
+        @apply inline-flex;
+    }
+
+    .header__nav {
+        @apply absolute left-0 right-0 top-full flex-col items-stretch gap-0 border-b border-brand-dark/10 bg-white p-6 shadow-lg;
+        @apply hidden;
+    }
+
+    .header__nav.is-open {
+        @apply flex;
+    }
+
+    .header__menu {
+        @apply flex-col items-stretch gap-1;
+    }
+
+    .header__menu-link {
+        @apply block w-full px-3 py-3 text-base;
+    }
+
+    .header__mobile-cta {
+        @apply flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__container {
+        @apply px-4;
+    }
+    .header__slogan {
+        @apply px-4 text-xs;
+    }
+    .header__logo-img {
+        @apply h-9;
+    }
+    .header__cta {
+        @apply px-4 py-2 text-sm;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .header__menu-link,
+    .header__cta,
+    .header__burger,
+    .header__burger-icon,
+    .header__burger-icon::before,
+    .header__burger-icon::after {
+        @apply transition-none;
+    }
+}

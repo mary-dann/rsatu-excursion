@@ -1,10 +1,18 @@
 @import "tailwindcss";
 
 @import "./base.css";
-
 @import "./blocks/header.css";
 
 @theme {
-
-  --font-sans: "Disket Mono", monospace;
+  /* Фирменные цвета */
+  --color-brand-blue: #3333CC; 
+  --color-brand-red: #FF0000;
+  --color-brand-light: #C7D7E4;
+  --color-brand-dark: #091D50;
+  --color-brand-teal: #3D737F;
+  --color-brand-teal-dark: #325761; 
+  
+  /* Шрифты */
+  --font-sans: "Montserrat", system-ui, sans-serif;  /* основной */
+  --font-mono: "Disket Mono", monospace;             /* акцентный */
 }

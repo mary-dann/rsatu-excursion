@@ -3,28 +3,85 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Экскурсия для абитуриентов</title>  
-        
+        <title>РГАТУ имени П.А. Соловьева</title>          
         <link rel="icon" href="/favicon.ico" />
-
     </head>
     
     <body>
-        <header class="header">
 
-        </header>
-            <h>Экскурсия для абитуриентов</h>
+                
+        <header class="header" id="header">
+  <!-- Верхняя полоса со слоганом -->
+  <div class="header__top-bar">
+    <p class="header__slogan">РГАТУ имени П.А. Соловьева — твой первый шаг в будущую профессию</p>
+  </div>
+
+  <!-- Основная часть шапки -->
+  <div class="header__container">
+    
+    <!-- Логотип -->
+    <a href="/" class="header__logo" aria-label="РГАТУ — на главную">
+      <img 
+        src="/src/images/logos/rgatu-logo.svg" 
+        alt="РГАТУ" 
+        class="header__logo-img"
+        width="140" 
+        height="44"
+      >
+    </a>
+
+    <!-- Навигация -->
+    <nav class="header__nav header__nav--mobile" id="nav" aria-label="Основная навигация">
+      <ul class="header__menu header__menu--mobile">
+        <li class="header__menu-item">
+          <a href="#calendar" class="header__menu-link">Календарь мероприятий</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="#info" class="header__menu-link">Об университете</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="#contacts" class="header__menu-link">Контакты</a>
+        </li>
+      </ul>
+      
+      <!-- Мобильная кнопка записи внутри меню -->
+      <a href="#signup" class="header__mobile-cta header__cta">
+        Записаться на экскурсию
+      </a>
+    </nav>
+
+    <!-- Десктопная кнопка записи -->
+    <a href="#signup" class="header__cta hidden md:inline-flex">
+      Записаться
+    </a>
+
+    <!-- Бургер -->
+    <button 
+      class="header__burger" 
+      id="burger" 
+      type="button"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+      aria-controls="nav"
+    >
+      <span class="header__burger-icon"></span>
+    </button>
+
+  </div>
+</header>
+
+        
+           
 
 
         <main>
-
         </main>
 
 
 
         <footer class="footer">
-
         </footer>
+
 
         <script type="module" src="/src/js/main.js"></script>
     </body>
