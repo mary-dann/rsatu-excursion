@@ -1,0 +1,40 @@
+.footer {
+  @apply fixed inset-x-0 bottom-0 z-30 bg-brand-dark text-white;
+}
+
+.footer__container {
+  @apply mx-auto max-w-7xl px-6 py-12 grid gap-8 md:grid-cols-3;
+}
+
+/* Заголовки колонок */
+.footer__title {
+  @apply font-mono text-sm font-bold uppercase tracking-wider text-brand-light mb-4;
+}
+
+/* Текст и ссылки */
+.footer__text {
+  @apply text-sm text-brand-light/80 leading-relaxed mb-2;
+}
+
+.footer__link {
+  @apply text-sm text-brand-light/80 transition-colors duration-200 hover:text-white hover:underline;
+}
+
+/* Соцсети */
+.footer__socials {
+  @apply flex gap-4 mt-4;
+}
+
+.footer__social-btn {
+  @apply inline-flex items-center justify-center text-white opacity-80 transition-opacity duration-200;
+}
+
+.footer__social-btn img {
+  @apply h-6 w-6 object-contain;
+  filter: brightness(0) invert(1);
+  transform: none !important; 
+}
+
+.footer__social-btn:hover {
+  @apply opacity-100;
+}

@@ -1,0 +1,101 @@
+/* --- Секция Hero --- */
+.hero {
+  @apply relative overflow-hidden bg-gradient-to-br from-brand-dark via-brand-dark to-brand-teal-dark text-white;
+}
+
+/* Декоративные светящиеся пятна на фоне */
+.hero__blob {
+  @apply pointer-events-none absolute rounded-full blur-3xl;
+}
+
+.hero__blob--blue {
+  @apply -right-32 -top-32 h-96 w-96 bg-brand-blue/30;
+}
+
+.hero__blob--teal {
+  @apply -bottom-24 -left-24 h-80 w-80 bg-brand-teal/40;
+}
+
+/* Сетка контента */
+.hero__container {
+  @apply relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28;
+}
+
+/* Заголовок */
+.hero__title {
+  @apply font-mono text-4xl font-bold leading-tight md:text-5xl lg:text-6xl;
+}
+
+/* Подзаголовок */
+.hero__subtitle {
+  @apply mt-6 max-w-lg text-lg text-brand-light/90;
+}
+
+/* Кнопки */
+.hero__actions {
+  @apply mt-8 flex flex-wrap gap-3;
+}
+
+.hero__btn-primary {
+  @apply rounded-xl bg-brand-blue px-6 py-3.5 font-semibold text-white shadow-lg shadow-brand-blue/30 transition-all duration-200;
+  @apply hover:-translate-y-0.5 hover:bg-white hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark;
+}
+
+.hero__btn-secondary {
+  @apply rounded-xl border border-white/30 px-6 py-3.5 font-semibold text-white transition-colors duration-200;
+  @apply hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white;
+}
+
+/* Блок с фото/слайдером */
+.hero__media {
+  @apply relative aspect-[4/3] overflow-hidden rounded-3xl bg-brand-teal-dark/40 shadow-2xl shadow-black/30;
+}
+
+.hero__media-placeholder {
+  @apply flex h-full w-full items-center justify-center font-mono text-sm text-brand-light/60;
+}
+
+/* --- Слайдер --- */
+.hero__slides {
+  @apply relative h-full w-full;
+}
+
+.hero__slide {
+  @apply absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-in-out;
+}
+
+.hero__slide.is-active {
+  @apply opacity-100 z-10;
+}
+
+/* Стрелки навигации */
+.hero__nav {
+  @apply absolute top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm transition-all duration-300;
+  @apply opacity-0 md:opacity-0; /* Скрыты по умолчанию на десктопе */
+}
+
+/* На мобильных устройствах стрелки всегда видны (так как там нет ховера) */
+@media (max-width: 768px) {
+  .hero__nav {
+    @apply opacity-100;
+  }
+}
+
+/* Показываем стрелки при наведении на весь блок слайдера */
+.hero__media:hover .hero__nav {
+  @apply opacity-100;
+}
+
+/* Ховер на саму стрелку */
+.hero__nav:hover {
+  @apply bg-brand-blue scale-110;
+}
+
+/* Позиции */
+.hero__nav--prev {
+  @apply left-4;
+}
+
+.hero__nav--next {
+  @apply right-4;
+}

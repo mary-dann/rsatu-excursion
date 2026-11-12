@@ -1,88 +1,163 @@
-    <!DOCTYPE html>
-    <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>РГАТУ имени П.А. Соловьева</title>          
-        <link rel="icon" href="/favicon.ico" />
-    </head>
-    
-    <body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>РГАТУ имени П.А. Соловьева – Экскурсии для абитуриентов</title>
+  <link rel="icon" href="/favicon.ico" />
+</head>
+<body class="bg-brand-light"> 
 
-                
-        <header class="header" id="header">
-  <!-- Верхняя полоса со слоганом -->
-  <div class="header__top-bar">
-    <p class="header__slogan">РГАТУ имени П.А. Соловьева — твой первый шаг в будущую профессию</p>
-  </div>
-
-  <!-- Основная часть шапки -->
-  <div class="header__container">
-    
-    <!-- Логотип -->
-    <a href="/" class="header__logo" aria-label="РГАТУ — на главную">
-      <img 
-        src="/src/images/logos/rgatu-logo.svg" 
-        alt="РГАТУ" 
-        class="header__logo-img"
-        width="140" 
-        height="44"
-      >
-    </a>
-
-    <!-- Навигация -->
-    <nav class="header__nav header__nav--mobile" id="nav" aria-label="Основная навигация">
-      <ul class="header__menu header__menu--mobile">
-        <li class="header__menu-item">
-          <a href="#calendar" class="header__menu-link">Календарь мероприятий</a>
-        </li>
-        <li class="header__menu-item">
-          <a href="#info" class="header__menu-link">Об университете</a>
-        </li>
-        <li class="header__menu-item">
-          <a href="#contacts" class="header__menu-link">Контакты</a>
-        </li>
-      </ul>
+  <header class="header" id="header">
+    <div class="header__container">
       
-      <!-- Мобильная кнопка записи внутри меню -->
-      <a href="#signup" class="header__mobile-cta header__cta">
-        Записаться на экскурсию
+      <!-- Логотип -->
+      <a href="/" class="header__logo" aria-label="РГАТУ — на главную">
+        <img src="/src/images/logos/rgatu-logo.svg" alt="РГАТУ" class="header__logo-img" width="140" height="44">
       </a>
-    </nav>
 
-    <!-- Десктопная кнопка записи -->
-    <a href="#signup" class="header__cta hidden md:inline-flex">
-      Записаться
-    </a>
+      <!-- Навигация -->
+      <nav class="header__nav" id="nav" aria-label="Основная навигация">
+        <ul class="header__menu">
+          <li class="header__menu-item"><a href="#calendar" class="header__menu-link">Календарь мероприятий</a></li>
+          <li class="header__menu-item"><a href="https://www.rsatu.ru/sveden/common/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Об университете</a></li>
+          <li class="header__menu-item"><a href="#contacts" class="header__menu-link">Контакты</a></li>
+        </ul>
+        <a href="#signup" class="header__mobile-cta header__cta">Записаться на экскурсию</a>
+      </nav>
 
-    <!-- Бургер -->
-    <button 
-      class="header__burger" 
-      id="burger" 
-      type="button"
-      aria-label="Открыть меню"
-      aria-expanded="false"
-      aria-controls="nav"
-    >
-      <span class="header__burger-icon"></span>
-    </button>
+      <!-- Десктопная кнопка -->
+      <a href="#signup" class="header__cta hidden md:inline-flex">Записаться</a>
 
-  </div>
-</header>
+      <!-- Бургер -->
+      <button class="header__burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span class="header__burger-icon"></span>
+      </button>
 
-        
-           
+    </div>
+  </header>
 
+  <!-- ОСНОВНОЙ КОНТЕНТ (КАРТОЧКА) -->
+  <main class="relative z-40 bg-white mx-4 my-4 rounded-3xl overflow-hidden shadow-2xl min-h-screen">
+    
+    <!-- HERO-СЕКЦИЯ -->
+    <section class="hero">
+      <div class="hero__blob hero__blob--blue"></div>
+      <div class="hero__blob hero__blob--teal"></div>
 
-        <main>
-        </main>
+      <div class="hero__container">
+        <div>          
+          <h1 class="hero__title">
+            Почувствуй себя <span class="text-brand-light">студентом</span> уже сегодня
+          </h1>
+          <p class="hero__subtitle">
+            Красивый текст
+          </p>
+          <div class="hero__actions">
+            <a href="#signup" class="hero__btn-primary">
+              Записаться на экскурсию
+            </a>
+            <a href="#calendar" class="hero__btn-secondary">
+              Выбрать дату
+            </a>
+          </div>
+        </div>
 
+        <div class="hero__media">
+          <div class="hero__media relative" id="hero-slider">
+            <!-- Фото с прошлого дня открытых дверей -->
+            <div class="hero__media relative group" id="hero-slider">
+              <div class="hero__slides relative h-full w-full">                  
+                <img src="/src/images/photos/open-day-1.jpg" alt="Экскурсия 1" class="hero__slide is-active">
+                <img src="/src/images/photos/open-day-2.jpg" alt="Экскурсия 2" class="hero__slide">
+                <img src="/src/images/photos/open-day-3.jpg" alt="Экскурсия 3" class="hero__slide">
+                <img src="/src/images/photos/open-day-4.jpg" alt="Экскурсия 4" class="hero__slide">
+                <img src="/src/images/photos/open-day-5.jpg" alt="Экскурсия 5" class="hero__slide">
+                <img src="/src/images/photos/open-day-6.jpg" alt="Экскурсия 6" class="hero__slide">
+                <img src="/src/images/photos/open-day-7.jpg" alt="Экскурсия 7" class="hero__slide">
+                <img src="/src/images/photos/open-day-8.jpg" alt="Экскурсия 8" class="hero__slide">
+                <img src="/src/images/photos/open-day-9.jpg" alt="Экскурсия 9" class="hero__slide">
+                <img src="/src/images/photos/open-day-10.jpg" alt="Экскурсия 10" class="hero__slide">
+                <img src="/src/images/photos/open-day-11.jpg" alt="Экскурсия 11" class="hero__slide">
+                <img src="/src/images/photos/open-day-12.jpg" alt="Экскурсия 12" class="hero__slide">
+                <img src="/src/images/photos/open-day-13.jpg" alt="Экскурсия 13" class="hero__slide">
+              </div>
+              
+              <!-- Кнопка Назад (левый край) -->
+              <button class="hero__nav hero__nav--prev" id="hero-prev" aria-label="Предыдущее фото">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+              </button>
+              
+              <!-- Кнопка Вперед (правый край) -->
+              <button class="hero__nav hero__nav--next" id="hero-next" aria-label="Следующее фото">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+            
+            <!-- Точки-индикаторы -->
+            <div class="hero__dots" id="hero-dots">
+              <button class="hero__dot is-active" aria-label="Слайд 1"></button>
+              <button class="hero__dot" aria-label="Слайд 2"></button>
+              <button class="hero__dot" aria-label="Слайд 3"></button>
+              <button class="hero__dot" aria-label="Слайд 4"></button>
+              <button class="hero__dot" aria-label="Слайд 5"></button>
+              <button class="hero__dot" aria-label="Слайд 6"></button>
+              <button class="hero__dot" aria-label="Слайд 7"></button>
+              <button class="hero__dot" aria-label="Слайд 8"></button>
+              <button class="hero__dot" aria-label="Слайд 9"></button>
+              <button class="hero__dot" aria-label="Слайд 10"></button>
+              <button class="hero__dot" aria-label="Слайд 11"></button>
+              <button class="hero__dot" aria-label="Слайд 12"></button>
+              <button class="hero__dot" aria-label="Слайд 13"></button>
+            </div>
 
+            
+          </div>
+        </div>
+      </div>
+    </section>
+      
+  </main>
 
-        <footer class="footer">
-        </footer>
+    <!-- ПОДВАЛ -->
+  <footer class="footer">
+    <div class="footer__container">
+      
+      <!-- Колонка 1: О вузе -->
+      <div>
+        <h3 class="footer__title">Приёмная комиссия</h3>
+        <p class="footer__text">г. Рыбинск</p>
+        <p class="footer__text">Телефон: </p>
+        <p class="footer__text">Email: </p>
+      </div>
 
+      
+      <!--Соцсети -->
+      <div>
+        <h3 class="footer__title">Мы в соцсетях</h3>
+        <p class="footer__text">Следите за новостями и анонсами экскурсий.</p>
+        <div class="footer__socials">
+          
+           <!-- ВКонтакте -->
+          <a href="https://vk.com/ryb_rsatu" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="ВКонтакте">
+            <img src="/src/images/icons/vk.svg" alt="" width="24" height="24">
+          </a>
+          
+          <!-- MAX -->
+          <a href="#" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="MAX">
+            <img src="/src/images/icons/max.svg" alt="" width="24" height="24">
+          </a>
 
-        <script type="module" src="/src/js/main.js"></script>
-    </body>
-    </html>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      © 2026 РГАТУ имени П.А. Соловьева. Все права защищены.
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
