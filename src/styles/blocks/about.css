@@ -1,0 +1,55 @@
+@layer components{
+  .about {
+    @apply w-full min-h-screen bg-white py-20 md:py-32 flex items-center;
+  }
+
+  .about__container {
+    @apply max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 w-full;
+  }
+
+  .about__grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start;
+  }
+
+  .about__left {
+    @apply md:sticky md:top-32;
+  }
+
+  .about__label {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-brand-teal mb-4;
+  }
+
+  .about__title {
+    @apply font-mono font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
+           text-brand-dark leading-[1.05];
+  }
+
+  .about__title-accent {
+    @apply text-brand-blue;
+  }
+
+  .about__right {
+    @apply space-y-6;
+  }
+
+  .about__text {
+    @apply font-sans text-lg md:text-xl text-gray-700 leading-relaxed;
+  }
+
+  /* Статистика */
+  .about__stats {
+    @apply grid grid-cols-3 gap-4 md:gap-8 mt-12 pt-8 border-t border-brand-light;
+  }
+
+  .about__stat {
+    @apply flex flex-col gap-2;
+  }
+
+  .about__stat-number {
+    @apply font-mono font-bold text-3xl md:text-4xl text-brand-dark;
+  }
+
+  .about__stat-label {
+    @apply font-sans text-sm text-gray-600;
+  }
+}

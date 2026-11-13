@@ -3,11 +3,14 @@
 @import "./base.css";
 @import "./blocks/header.css";
 @import "./blocks/hero.css";
+@import "./blocks/about.css";
+@import "./blocks/filmstrip.css";
 @import "./blocks/footer.css";
 
 @theme {
   /* Фирменные цвета */
   --color-brand-blue: #3333CC; 
+  --color-sky: #60A5FA;
   --color-brand-red: #FF0000;
   --color-brand-light: #C7D7E4;
   --color-brand-dark: #091D50;

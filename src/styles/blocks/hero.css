@@ -1,101 +1,63 @@
-/* --- Секция Hero --- */
-.hero {
-  @apply relative overflow-hidden bg-gradient-to-br from-brand-dark via-brand-dark to-brand-teal-dark text-white;
-}
-
-/* Декоративные светящиеся пятна на фоне */
-.hero__blob {
-  @apply pointer-events-none absolute rounded-full blur-3xl;
-}
-
-.hero__blob--blue {
-  @apply -right-32 -top-32 h-96 w-96 bg-brand-blue/30;
-}
-
-.hero__blob--teal {
-  @apply -bottom-24 -left-24 h-80 w-80 bg-brand-teal/40;
-}
-
-/* Сетка контента */
-.hero__container {
-  @apply relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28;
-}
-
-/* Заголовок */
-.hero__title {
-  @apply font-mono text-4xl font-bold leading-tight md:text-5xl lg:text-6xl;
-}
-
-/* Подзаголовок */
-.hero__subtitle {
-  @apply mt-6 max-w-lg text-lg text-brand-light/90;
-}
-
-/* Кнопки */
-.hero__actions {
-  @apply mt-8 flex flex-wrap gap-3;
-}
-
-.hero__btn-primary {
-  @apply rounded-xl bg-brand-blue px-6 py-3.5 font-semibold text-white shadow-lg shadow-brand-blue/30 transition-all duration-200;
-  @apply hover:-translate-y-0.5 hover:bg-white hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark;
-}
-
-.hero__btn-secondary {
-  @apply rounded-xl border border-white/30 px-6 py-3.5 font-semibold text-white transition-colors duration-200;
-  @apply hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white;
-}
-
-/* Блок с фото/слайдером */
-.hero__media {
-  @apply relative aspect-[4/3] overflow-hidden rounded-3xl bg-brand-teal-dark/40 shadow-2xl shadow-black/30;
-}
-
-.hero__media-placeholder {
-  @apply flex h-full w-full items-center justify-center font-mono text-sm text-brand-light/60;
-}
-
-/* --- Слайдер --- */
-.hero__slides {
-  @apply relative h-full w-full;
-}
-
-.hero__slide {
-  @apply absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-in-out;
-}
-
-.hero__slide.is-active {
-  @apply opacity-100 z-10;
-}
-
-/* Стрелки навигации */
-.hero__nav {
-  @apply absolute top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm transition-all duration-300;
-  @apply opacity-0 md:opacity-0; /* Скрыты по умолчанию на десктопе */
-}
-
-/* На мобильных устройствах стрелки всегда видны (так как там нет ховера) */
-@media (max-width: 768px) {
-  .hero__nav {
-    @apply opacity-100;
+@layer components {
+  .hero {
+    @apply relative w-full h-screen overflow-hidden z-0;
   }
-}
 
-/* Показываем стрелки при наведении на весь блок слайдера */
-.hero__media:hover .hero__nav {
-  @apply opacity-100;
-}
+  .hero__bg {
+    @apply absolute inset-0 w-full h-full;
+  }
 
-/* Ховер на саму стрелку */
-.hero__nav:hover {
-  @apply bg-brand-blue scale-110;
-}
+  .hero__bg-img {
+    @apply w-full h-full object-cover;
+  }
 
-/* Позиции */
-.hero__nav--prev {
-  @apply left-4;
-}
+  /* Затемнение поверх фото для читаемости текста */
+  .hero__overlay {
+    @apply absolute inset-0 bg-brand-dark/60;
+  }
 
-.hero__nav--next {
-  @apply right-4;
+  .hero__content {
+    @apply relative z-10 h-full flex flex-col items-center justify-center 
+           text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto;
+  }
+
+  .hero__eyebrow {
+    @apply font-mono text-xs sm:text-sm uppercase tracking-[0.3em] 
+           text-brand-light mb-6 opacity-90;
+  }
+
+  .hero__title {
+    @apply font-mono font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl 
+           text-white leading-[0.95] mb-8;
+  }
+
+  .hero__subtitle {
+    @apply font-sans text-lg sm:text-xl md:text-2xl 
+           text-brand-light max-w-2xl mb-12;
+  }
+
+  .hero__cta {
+    @apply inline-flex items-center gap-2 px-8 py-4 
+           bg-sky text-white font-mono font-bold sm:text-lg 
+           rounded-lg no-underline whitespace-nowrap
+           shadow-lg hover:bg-white hover:shadow-xl hover:scale-105 hover:text-sky
+           active:scale-100
+           transition-all duration-300
+           focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2;
+  }
+
+  /* Подсказка "Листай вниз" */
+  .hero__scroll-hint {
+    @apply absolute bottom-8 left-1/2 -translate-x-1/2 z-10
+           flex flex-col items-center gap-2 text-brand-light/70
+           animate-bounce;
+  }
+
+  .hero__scroll-text {
+    @apply font-mono text-xs uppercase tracking-widest;
+  }
+
+  .hero__scroll-arrow {
+    @apply block w-5 h-5 border-r-2 border-b-2 border-brand-light/70 rotate-45;
+  }
 }

@@ -37,87 +37,150 @@
     </div>
   </header>
 
-  <!-- ОСНОВНОЙ КОНТЕНТ (КАРТОЧКА) -->
-  <main class="relative z-40 bg-white mx-4 my-4 rounded-3xl overflow-hidden shadow-2xl min-h-screen">
-    
-    <!-- HERO-СЕКЦИЯ -->
-    <section class="hero">
-      <div class="hero__blob hero__blob--blue"></div>
-      <div class="hero__blob hero__blob--teal"></div>
+  
+  <main>
+    <section class="hero" id="hero" aria-label="Главный экран">
+      <div class="hero__bg">
+        <img src="/src/images/photos/rgatu.jpg" alt="РГАТУ" class="hero__bg-img" loading="eager">
+        <div class="hero__overlay"></div>
+      </div>
+      
+      <div class="hero__content">
+        <p class="hero__eyebrow">РГАТУ имени П.А. Соловьева приглашает</p>
+        <h1 class="hero__title">Экскурсии<br>для школьников</h1>
+        <p class="hero__subtitle">Побывай в лабораториях, познакомься со студентами и почувствуй атмосферу университета</p>
+        <a href="#signup" class="hero__cta">Записаться на экскурсию</a>
+      </div>
+      
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span class="hero__scroll-text">Листай вниз</span>
+        <span class="hero__scroll-arrow"></span>
+      </div>
+    </section>
 
-      <div class="hero__container">
-        <div>          
-          <h1 class="hero__title">
-            Почувствуй себя <span class="text-brand-light">студентом</span> уже сегодня
-          </h1>
-          <p class="hero__subtitle">
-            Красивый текст
-          </p>
-          <div class="hero__actions">
-            <a href="#signup" class="hero__btn-primary">
-              Записаться на экскурсию
-            </a>
-            <a href="#calendar" class="hero__btn-secondary">
-              Выбрать дату
-            </a>
+    <!-- блок текста-->
+    <section class="about" id="about" aria-label="Об экскурсиях">
+      <div class="about__container">
+        <div class="about__grid">
+          <div class="about__left">
+            <p class="about__label">Что вас ждёт</p>
+            <h2 class="about__title">
+              Один день<br>
+              из жизни<br>
+              <span class="about__title-accent">студента</span>
+            </h2>
           </div>
-        </div>
+          
+          <div class="about__right">
+            <p class="about__text">
+              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
+              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
+              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
+              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
+              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
+              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
 
-        <div class="hero__media">
-          <div class="hero__media relative" id="hero-slider">
-            <!-- Фото с прошлого дня открытых дверей -->
-            <div class="hero__media relative group" id="hero-slider">
-              <div class="hero__slides relative h-full w-full">                  
-                <img src="/src/images/photos/open-day-1.jpg" alt="Экскурсия 1" class="hero__slide is-active">
-                <img src="/src/images/photos/open-day-2.jpg" alt="Экскурсия 2" class="hero__slide">
-                <img src="/src/images/photos/open-day-3.jpg" alt="Экскурсия 3" class="hero__slide">
-                <img src="/src/images/photos/open-day-4.jpg" alt="Экскурсия 4" class="hero__slide">
-                <img src="/src/images/photos/open-day-5.jpg" alt="Экскурсия 5" class="hero__slide">
-                <img src="/src/images/photos/open-day-6.jpg" alt="Экскурсия 6" class="hero__slide">
-                <img src="/src/images/photos/open-day-7.jpg" alt="Экскурсия 7" class="hero__slide">
-                <img src="/src/images/photos/open-day-8.jpg" alt="Экскурсия 8" class="hero__slide">
-                <img src="/src/images/photos/open-day-9.jpg" alt="Экскурсия 9" class="hero__slide">
-                <img src="/src/images/photos/open-day-10.jpg" alt="Экскурсия 10" class="hero__slide">
-                <img src="/src/images/photos/open-day-11.jpg" alt="Экскурсия 11" class="hero__slide">
-                <img src="/src/images/photos/open-day-12.jpg" alt="Экскурсия 12" class="hero__slide">
-                <img src="/src/images/photos/open-day-13.jpg" alt="Экскурсия 13" class="hero__slide">
+            </p>
+            <p class="about__text">
+              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
+              Мы проводим экскурсии для школьников 9–11 классов и их родителей.
+              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
+              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
+              
+            </p>
+            
+            <div class="about__stats">
+              <div class="about__stat">
+                <span class="about__stat-number">7</span>
+                <span class="about__stat-label">лабораторий</span>
               </div>
-              
-              <!-- Кнопка Назад (левый край) -->
-              <button class="hero__nav hero__nav--prev" id="hero-prev" aria-label="Предыдущее фото">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-              </button>
-              
-              <!-- Кнопка Вперед (правый край) -->
-              <button class="hero__nav hero__nav--next" id="hero-next" aria-label="Следующее фото">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-              </button>
+              <div class="about__stat">
+                <span class="about__stat-number">20</span>
+                <span class="about__stat-label">человек в группе</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-number">2 часа</span>
+                <span class="about__stat-label">длится экскурсия</span>
+              </div>
             </div>
-            
-            <!-- Точки-индикаторы -->
-            <div class="hero__dots" id="hero-dots">
-              <button class="hero__dot is-active" aria-label="Слайд 1"></button>
-              <button class="hero__dot" aria-label="Слайд 2"></button>
-              <button class="hero__dot" aria-label="Слайд 3"></button>
-              <button class="hero__dot" aria-label="Слайд 4"></button>
-              <button class="hero__dot" aria-label="Слайд 5"></button>
-              <button class="hero__dot" aria-label="Слайд 6"></button>
-              <button class="hero__dot" aria-label="Слайд 7"></button>
-              <button class="hero__dot" aria-label="Слайд 8"></button>
-              <button class="hero__dot" aria-label="Слайд 9"></button>
-              <button class="hero__dot" aria-label="Слайд 10"></button>
-              <button class="hero__dot" aria-label="Слайд 11"></button>
-              <button class="hero__dot" aria-label="Слайд 12"></button>
-              <button class="hero__dot" aria-label="Слайд 13"></button>
-            </div>
-
-            
           </div>
         </div>
       </div>
     </section>
-      
+
+    <!-- фото с мероприятий -->
+    <section class="filmstrip" id="gallery" aria-label="Фото с прошлых экскурсий">
+      <div class="filmstrip__header">
+        <div class="filmstrip__container">
+          <p class="filmstrip__label">Живые кадры</p>
+          <h2 class="filmstrip__title">Как проходят экскурсии</h2>
+          <p class="filmstrip__subtitle">Листайте, чтобы увидеть больше</p>
+        </div>
+        
+        <div class="filmstrip__controls">
+          <button class="filmstrip__btn filmstrip__btn--prev" id="filmPrev" type="button" aria-label="Предыдущее фото">
+            <span class="filmstrip__btn-icon" aria-hidden="true">←</span>
+          </button>
+          <button class="filmstrip__btn filmstrip__btn--next" id="filmNext" type="button" aria-label="Следующее фото">
+            <span class="filmstrip__btn-icon" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="filmstrip__track" id="filmTrack">
+          
+        <article class="filmstrip__frame">
+          <img src="/src/images/photos/open-day-1.jpg" alt="фото 1" class="filmstrip__img" loading="lazy">
+        </article>
+        
+        <article class="filmstrip__frame">
+          <img src="/src/images/photos/open-day-7.jpg" alt="фото 7" class="filmstrip__img" loading="lazy">
+        </article>
+        
+        <article class="filmstrip__frame">
+          <img src="/src/images/photos/open-day-9.jpg" alt="фото 9" class="filmstrip__img" loading="lazy">
+        </article>
+
+        <article class="filmstrip__frame">
+          <img src="/src/images/photos/open-day-8.jpg" alt="фото 8" class="filmstrip__img" loading="lazy">
+        </article>
+
+        <article class="filmstrip__frame">
+          <img src="/src/images/photos/open-day-3.jpg" alt="фото 3" class="filmstrip__img" loading="lazy">
+        </article>
+
+        <article class="filmstrip__frame">
+          <img src="/src/images/photos/open-day-4.jpg" alt="фото 4" class="filmstrip__img" loading="lazy">
+        </article>
+
+        <article class="filmstrip__frame">
+          <img src="/src/images/photos/open-day-5.jpg" alt="фото 5" class="filmstrip__img" loading="lazy">
+        </article>
+
+        <article class="filmstrip__frame">
+          <img src="/src/images/photos/open-day-10.jpg" alt="фото 10" class="filmstrip__img" loading="lazy">
+        </article>
+
+        <article class="filmstrip__frame">
+          <img src="/src/images/photos/open-day-11.jpg" alt="фото 11" class="filmstrip__img" loading="lazy">
+        </article>
+
+        
+        
+        <!-- ссылка на альбом -->
+        <div class="filmstrip__frame filmstrip__frame--more">
+          <a href="https://vk.ru/album-38910517_309429966" class="filmstrip__more-link">
+            <span class="filmstrip__more-icon" aria-hidden="true">+</span>
+            <span class="filmstrip__more-text">Смотреть весь<br>фотоальбом</span>
+          </a>
+        </div>
+        
+
+      </div>
+    </section>
+
   </main>
+
 
     <!-- ПОДВАЛ -->
   <footer class="footer">

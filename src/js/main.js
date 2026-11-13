@@ -203,4 +203,51 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoPlay();
   }
 
+    // Прокрутка плёнки кнопками
+    const filmTrack = document.getElementById('filmTrack');
+    const filmPrev = document.getElementById('filmPrev');
+    const filmNext = document.getElementById('filmNext');
+
+    if (filmTrack && filmPrev && filmNext) {
+    // Ширина одного кадра + gap
+    const getScrollAmount = () => {
+        const frame = filmTrack.querySelector('.filmstrip__frame');
+        if (!frame) return 400;
+        const style = window.getComputedStyle(frame);
+        return frame.offsetWidth + parseInt(style.marginRight || 0) + 24; // 24 = gap
+    };
+
+    filmNext.addEventListener('click', () => {
+        filmTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+    });
+
+    filmPrev.addEventListener('click', () => {
+        filmTrack.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    });
+
+    // Отключаем кнопки на краях
+    const updateButtons = () => {
+        const { scrollLeft, scrollWidth, clientWidth } = filmTrack;
+        filmPrev.disabled = scrollLeft <= 10;
+        filmNext.disabled = scrollLeft + clientWidth >= scrollWidth - 10;
+    };
+
+    filmTrack.addEventListener('scroll', updateButtons, { passive: true });
+    updateButtons();
+    window.addEventListener('resize', updateButtons);
+    }
+
+    // Плавная прокрутка к якорям (для кнопки "Листай вниз")
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href');
+        if (targetId === '#') return;
+        const target = document.querySelector(targetId);
+        if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+    });
+
 }); 

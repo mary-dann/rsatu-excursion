@@ -30,10 +30,6 @@
   src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
 :root {
   --header-height: 110px; 
   --footer-height: 80px;
@@ -44,7 +40,6 @@ html {
 }
 
 body {
-  margin: 0;
   font-family: 'Montserrat', system-ui, sans-serif;
   font-weight: 300;
   color: #1a1a1a;
@@ -56,17 +51,6 @@ body {
 
 body.overflow-hidden {
   overflow: hidden;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 main {
