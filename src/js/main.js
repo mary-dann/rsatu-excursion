@@ -1,4 +1,5 @@
 import '../styles/main.css';
+import { initLightbox } from './modules/lightbox.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.getElementById('burger');
@@ -216,6 +217,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
- 
-  initScrollSpy();  
+  initLightbox();   
 });

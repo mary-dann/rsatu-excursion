@@ -221,6 +221,28 @@
     </div>
   </footer>
 
+  <!-- просмотр фото -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" hidden>
+    <div class="lightbox__overlay" id="lightboxOverlay"></div>
+
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Закрыть">
+      <span aria-hidden="true">×</span>
+    </button>
+
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" type="button" aria-label="Предыдущее фото">
+      <span aria-hidden="true">←</span>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" type="button" aria-label="Следующее фото">
+      <span aria-hidden="true">→</span>
+    </button>
+
+    <div class="lightbox__content">
+      <img src="" alt="" class="lightbox__img" id="lightboxImg">
+      <p class="lightbox__caption" id="lightboxCaption"></p>
+      <p class="lightbox__counter" id="lightboxCounter"></p>
+    </div>
+  </div>
+
   <script type="module" src="/src/js/main.js"></script>
 </body>
 </html>

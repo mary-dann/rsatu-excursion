@@ -6,6 +6,7 @@
 @import "./blocks/about.css";
 @import "./blocks/filmstrip.css";
 @import "./blocks/footer.css";
+@import "./blocks/lightbox.css";
 
 @theme {
   /* Фирменные цвета */
