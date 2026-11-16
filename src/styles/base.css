@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Disket Mono';
   font-style: normal;
@@ -43,7 +44,7 @@ body {
   font-family: 'Montserrat', system-ui, sans-serif;
   font-weight: 300;
   color: #1a1a1a;
-  background-color: #C7D7E4; /* Голубой фон-подложка */
+  background-color: #091D50;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -72,8 +73,8 @@ main {
 .footer {
   position: fixed;
   inset: auto 0 0 0;
-  z-index: 30; /* Подвал уходит ПОД карточку main */
-  background-color: #091D50; /* Цвет фона подвала (brand-dark) */
+  z-index: 30; 
+  background-color: #091D50; 
   color: white;
 }
 

@@ -13,7 +13,7 @@
 
   /* Затемнение поверх фото для читаемости текста */
   .hero__overlay {
-    @apply absolute inset-0 bg-brand-dark/70;
+    @apply absolute inset-0 bg-brand-dark/55;
   }
 
   .hero__content {

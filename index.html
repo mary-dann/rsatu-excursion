@@ -7,36 +7,48 @@
   <link rel="icon" href="/favicon.ico" />
 </head>
 <body class="bg-brand-light"> 
-
+    
   <header class="header" id="header">
     <div class="header__container">
       
-      <!-- Логотип -->
       <a href="/" class="header__logo" aria-label="РГАТУ — на главную">
-        <img src="/src/images/logos/rgatu-logo.svg" alt="РГАТУ" class="header__logo-img" width="140" height="44">
+        <img src="/src/images/logos/rgatu-logo-white.svg" alt="РГАТУ" class="header__logo-img" width="140" height="44">
       </a>
-
-      <!-- Навигация -->
-      <nav class="header__nav" id="nav" aria-label="Основная навигация">
-        <ul class="header__menu">
-          <li class="header__menu-item"><a href="#calendar" class="header__menu-link">Календарь мероприятий</a></li>
-          <li class="header__menu-item"><a href="https://www.rsatu.ru/sveden/common/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Об университете</a></li>
-          <li class="header__menu-item"><a href="#contacts" class="header__menu-link">Контакты</a></li>
-        </ul>
-        <a href="#signup" class="header__mobile-cta header__cta">Записаться на экскурсию</a>
-      </nav>
-
-      <!-- Десктопная кнопка -->
-      <a href="#signup" class="header__cta hidden md:inline-flex">Записаться</a>
-
-      <!-- Бургер -->
       <button class="header__burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
         <span class="header__burger-icon"></span>
       </button>
-
     </div>
   </header>
 
+    <nav class="header__nav" id="nav" aria-label="Основная навигация">
+      <div class="header__nav-inner">
+        
+        <!-- Колонка 1:  -->
+        <div class="header__nav-column">          
+          <a href="https://www.rsatu.ru/" class="header__nav-link">РГАТУ</a>
+          <a href="/" class="header__nav-link">Курсы (?)</a>
+          <a href="/" class="header__nav-link">Олимпиады (?)</a>
+          <a href="https://www.rsatu.ru/dop/exam/" class="header__nav-link">Подготовка к ОГЭ и ЕГЭ</a>
+          <a href="https://www.rsatu.ru/ireactor/" class="header__nav-link">Интеллектуальный реактор</a>
+          <a href="/" class="header__nav-link">Кем стать? (?)</a>          
+          <a href="https://www.rsatu.ru/studlife/" class="header__nav-link">Студенческая жизнь</a>
+          <a href="/" class="header__nav-link">Приём 2026 (?)</a>
+        </div>
+
+        <!-- Колонка 2: Навигация -->
+        <div class="header__nav-column">
+          <h3 class="header__nav-title">Добро пожаловать</h3>
+          <ul class="header__menu">
+            <li class="header__menu-item"><a href="#calendar" class="header__menu-link">Календар мероприятий</a></li>
+            <li class="header__menu-item"><a href="https://www.rsatu.ru/sveden/common/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Об университете</a></li>
+            <li class="header__menu-item"><a href="#contacts" class="header__menu-link">Контакты</a></li>
+          </ul>
+        </div>
+
+        
+      </div>
+    </nav>
+  
   
   <main>
     <section class="hero" id="hero" aria-label="Главный экран">
@@ -112,7 +124,6 @@
     <section class="filmstrip" id="gallery" aria-label="Фото с прошлых экскурсий">
       <div class="filmstrip__header">
         <div class="filmstrip__container">
-          <p class="filmstrip__label">Живые кадры</p>
           <h2 class="filmstrip__title">Как проходят экскурсии</h2>
           <p class="filmstrip__subtitle">Листайте, чтобы увидеть больше</p>
         </div>
