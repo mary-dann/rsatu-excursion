@@ -1,40 +1,82 @@
-.footer {
-  @apply fixed inset-x-0 bottom-0 z-30 bg-brand-dark text-white;
-}
+@layer components {
+  .footer {
+    @apply fixed inset-x-0 bottom-0 z-30 bg-brand-dark text-white;
+  }
 
-.footer__container {
-  @apply mx-auto max-w-7xl px-6 py-12 grid gap-8 md:grid-cols-3;
-}
+  .footer__container {
+    @apply mx-auto max-w-7xl px-6 py-12 grid gap-8 md:grid-cols-3;
+  }
 
-/* Заголовки колонок */
-.footer__title {
-  @apply font-mono text-sm font-bold uppercase tracking-wider text-brand-light mb-4;
-}
+  /* Заголовки колонок */
+  .footer__title {
+    @apply mb-4 text-base font-mono font-bold uppercase tracking-wider text-brand-light;
+  }
 
-/* Текст и ссылки */
-.footer__text {
-  @apply text-sm text-brand-light/80 leading-relaxed mb-2;
-}
+  /* Текст и ссылки */
+  .footer__text {
+    @apply text-sm text-brand-light leading-relaxed mb-2;
+  }
 
-.footer__link {
-  @apply text-sm text-brand-light/80 transition-colors duration-200 hover:text-white hover:underline;
-}
+  .footer__link {
+    @apply text-sm text-brand-light/80 transition-colors duration-200 hover:text-white hover:underline;
+  }
 
-/* Соцсети */
-.footer__socials {
-  @apply flex gap-4 mt-4;
-}
+  /* Соцсети */
+  .footer__socials {
+    @apply flex gap-4 mt-4;
+  }
 
-.footer__social-btn {
-  @apply inline-flex items-center justify-center text-white opacity-80 transition-opacity duration-200;
-}
+  .footer__social-btn {
+    @apply inline-flex items-center justify-center text-white opacity-80 transition-opacity duration-200;
+  }
 
-.footer__social-btn img {
-  @apply h-6 w-6 object-contain;
-  filter: brightness(0) invert(1);
-  transform: none !important; 
-}
+  .footer__social-btn img {
+    @apply h-6 w-6 object-contain;
+    filter: brightness(0) invert(1);
+  }
 
-.footer__social-btn:hover {
-  @apply opacity-100;
+  .footer__social-btn:hover {
+    @apply opacity-100;
+  }
+
+  .footer__icon {
+    @apply inline-block w-5 h-5 flex-shrink-0 mt-0.5;
+    
+    background-color: currentColor; 
+    
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+  .footer__icon--phone {
+    -webkit-mask-image: url('/src/images/icons/phone.svg');
+    mask-image: url('/src/images/icons/phone.svg');
+  }
+
+  .footer__icon--email {
+    -webkit-mask-image: url('/src/images/icons/email.svg');
+    mask-image: url('/src/images/icons/email.svg');
+  }
+
+  .footer__icon--pin {
+    -webkit-mask-image: url('/src/images/icons/map-pin.svg');
+    mask-image: url('/src/images/icons/map-pin.svg');
+  }
+
+  .footer__contact-item {
+    @apply flex items-start gap-3 mb-3 text-brand-light transition-colors duration-200;
+  }
+
+  .footer__contact-item:hover {
+    @apply text-white;
+  }
+
+  .footer__bottom {
+    @apply pt-6 pb-4 text-center text-brand-light font-bold;
+  }
+
 }
