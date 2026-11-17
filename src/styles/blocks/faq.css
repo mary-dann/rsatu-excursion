@@ -8,12 +8,11 @@
   }
 
   .faq-page__title {
-    @apply font-mono font-bold text-3xl md:text-5xl text-brand-dark mb-4;
+    @apply font-mono font-bold text-3xl md:text-5xl text-brand-dark mb-12 mt-12;
   }
 
-
   .faq-tabs {
-    @apply flex gap-2 mb-8 overflow-x-auto pb-2 -mx-4 px-4;
+    @apply flex gap-1 overflow-x-auto pb-2 -mx-4 px-4;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -47,7 +46,7 @@
   }
 
   .faq-item {
-    @apply border-b border-gray-200 last:border-0;
+    @apply border-b border-brand-blue/50 last:border-0;
   }
 
   /* Кнопка вопроса */
@@ -55,7 +54,7 @@
     @apply w-full flex items-center justify-between gap-4 py-5 text-left 
            font-sans text-base md:text-lg font-semibold text-brand-dark 
            bg-transparent border-0 cursor-pointer
-           transition-colors duration-200
+           transition-colors duration-200 mb-4
            hover:text-brand-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded;
   }
 
@@ -75,6 +74,6 @@
   }
 
   .faq-item__answer p {
-    @apply font-sans text-base text-gray-700 leading-relaxed pb-5 pr-12;
+    @apply font-sans text-base leading-relaxed pb-5 pr-12;
   }
 }
