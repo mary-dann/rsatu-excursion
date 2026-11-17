@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Часто задаваемые вопросы</title>
+  <link rel="icon" href="/favicon.ico" />
+</head>
+<body class="bg-brand-light"> 
+
+    <header class="header" id="header">
+        <div class="header__container">
+        
+        <a href="https://www.rsatu.ru/" class="header__logo" aria-label="РГАТУ">
+            <img src="/src/images/logos/rgatu-logo-white.svg" alt="РГАТУ" class="header__logo-img" width="140" height="44">
+        </a>
+        <button class="header__burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+            <span class="header__burger-icon"></span>
+        </button>
+        </div>
+    </header>
+    
+    <nav class="header__nav" id="nav" aria-label="Основная навигация">
+      <div class="header__nav-inner">
+        
+        <div class="header__nav-column">          
+          <a href="https://www.rsatu.ru/" class="header__nav-link">РГАТУ</a>
+          <a href="/" class="header__nav-link">Курсы (?)</a>
+          <a href="/" class="header__nav-link">Олимпиады (?)</a>
+          <a href="https://www.rsatu.ru/dop/exam/" class="header__nav-link">Подготовка к ОГЭ и ЕГЭ</a>
+          <a href="https://www.rsatu.ru/ireactor/" class="header__nav-link">Интеллектуальный реактор</a>
+          <a href="/" class="header__nav-link">Кем стать? (?)</a>          
+          <a href="https://www.rsatu.ru/studlife/" class="header__nav-link">Студенческая жизнь</a>
+          <a href="/" class="header__nav-link">Приём 2026 (?)</a>
+        </div>
+
+        <div class="header__nav-column">
+          <h3 class="header__nav-title">Добро пожаловать</h3>
+          <ul class="header__menu">
+            <li class="header__menu-item"><a href="#calendar" class="header__menu-link">Календар мероприятий</a></li>
+            <li class="header__menu-item"><a href="https://www.rsatu.ru/sveden/common/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Об университете</a></li>
+            <li class="header__menu-item"><a href="#contacts" class="header__menu-link">Контакты</a></li>
+          
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+
+
+    <main>
+        <div class="faq-page__container">
+        <h1 class="faq-page__title">Часто задаваемые вопросы</h1>
+
+        <div class="faq-tabs">
+          <a href="#" class="faq-tab is-active" data-category="admission">Документы и сроки</a>
+          <a href="#" class="faq-tab" data-category="exams">Экзамены и баллы</a>
+          <a href="#" class="faq-tab" data-category="dorm">Общежитие</a>
+          <a href="#" class="faq-tab" data-category="study">Учебный процесс</a>
+        </div>
+
+        <!-- Документы и сроки  -->
+        <div class="faq-category is-active" data-category="admission" role="tabpanel">
+            <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+                <span>Нужно ли в 2026 году подавать подлинник аттестата?</span>
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+                <p>Нет, не нужно. Достаточно предоставления согласия на зачисление в установленные сроки.</p>
+            </div>
+            </div>
+
+            <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+                <span>Крайний срок предоставления согласия на зачисление?</span>
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+                <p>Приоритетный этап — 1 августа до 12:00; основной этап — 5 августа до 12:00; дополнительный этап — 9 августа до 12:00.</p>
+            </div>
+            </div>
+
+            <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+                <span>Сколько направлений можно указать в заявлении?</span>
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+                <p>До пяти направлений подготовки на выбор.</p>
+            </div>
+            </div>
+        </div>
+
+        <!-- Экзамены и баллы -->
+        <div class="faq-category" data-category="exams" role="tabpanel">
+            <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+                <span>Можно ли поступать с ЕГЭ по базовой математике?</span>
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+                <p>Нет, нельзя. Для поступления требуется результат ЕГЭ по профильной математике.</p>
+            </div>
+            </div>
+
+            <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+                <span>Каковы проходные баллы в 2026 году?</span>
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+                <p>Вуз проходные баллы заранее не назначает. Проходной балл формируется по итогам приема: это балл последнего абитуриента, зачисленного на бюджетное место.</p>
+            </div>
+            </div>
+        </div>
+
+        <!-- Общежитие -->
+        <div class="faq-category" data-category="dorm" role="tabpanel">
+            <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+                <span>Всем ли иногородним студентам предоставляется общежитие?</span>
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+                <p>Да, всем иногородним студентам, зачисленным на бюджетные места, предоставляется общежитие.</p>
+            </div>
+            </div>
+
+            <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+                <span>Предоставляется ли общежитие заочникам на время сессии?</span>
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+                <p>Да, предоставляется. Оплата проживания производится посуточно.</p>
+            </div>
+            </div>
+        </div>
+
+        <!-- Учебный процесс -->
+        <div class="faq-category" data-category="study" role="tabpanel">
+            <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+                <span>Продолжительность очного обучения?</span>
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+                <p>Бакалавриат — 4 года, специалитет — 5,5 лет, магистратура — 2 года.</p>
+            </div>
+            </div>
+
+            <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+                <span>Положена ли стипендия студентам заочной формы?</span>
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+                <p>Нет, академическая стипендия положена только студентам очной формы обучения, сдающим сессию на «хорошо» и «отлично».</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="footer__container">      
+        <div>
+            <h3 class="footer__title">Центр по работе с абитуриентами универстарт</h3>        
+
+            <div class="footer__contact-item">
+            <span class="footer__icon footer__icon--pin" aria-hidden="true"></span>
+            <a href="https://yandex.ru/maps/?text=РГАТУ+Рыбинск+улица+Пушкина+53" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="footer__link">г. Рыбинск, ул. Пушкина, д. 53,<br>Главный корпус РГАТУ, каб. 101</a>
+            </div>
+
+            <div class="footer__contact-item">
+            <span class="footer__icon footer__icon--phone" aria-hidden="true"></span>
+            <a href="tel:+74855239760" class="footer__link">+7 (4855) 23-97-60</a> 
+            </div>
+
+            <div class="footer__contact-item">
+            <span class="footer__icon footer__icon--email" aria-hidden="true"></span>
+            <a href="mailto:gagarina_ai@rsatu.ru" class="footer__link">gagarina_ai@rsatu.ru</a> 
+            </div>
+        </div>
+
+        
+        <div>
+            <h3 class="footer__title">График работы</h3>
+            <span class="footer__text">Пн–Пт 8:30–17:30 (обед 12:30–13:30)<br>Сб–Вс выходной</span>
+        </div>
+            
+        <div>
+            <h3 class="footer__title">Мы в соцсетях</h3>
+            <div class="footer__socials">
+            
+            <!-- ВКонтакте -->
+            <a href="https://vk.com/ryb_rsatu" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="ВКонтакте">
+                <img src="/src/images/icons/vk.svg" alt="" width="24" height="24">
+            </a>
+            
+            <!-- MAX -->
+            <a href="https://max.ru/id7610029476_biz" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="MAX">
+                <img src="/src/images/icons/max.svg" alt="" width="24" height="24">
+            </a>
+
+            <!-- Telegram  -->
+            <a href="https://t.me/rsatu_info" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="Telegram">
+                <img src="/src/images/icons/telegram.svg" alt="" width="24" height="24">
+            </a>
+
+            </div>
+        </div>
+
+        </div>
+
+        <div class="footer__bottom">
+        © РГАТУ имени П.А. Соловьева, 2026
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+    </body>
+    </html>

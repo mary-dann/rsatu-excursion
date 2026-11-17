@@ -1,5 +1,6 @@
 import '../styles/main.css';
 import { initLightbox } from './modules/lightbox.js';
+import { initFaqAccordion } from './modules/faq.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.getElementById('burger');
@@ -218,4 +219,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   initLightbox();   
+  initFaqAccordion();
 });

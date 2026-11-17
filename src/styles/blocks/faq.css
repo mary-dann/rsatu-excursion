@@ -1,0 +1,80 @@
+@layer components {
+  .faq-page {
+    @apply bg-brand-light py-16 md:py-24;
+  }
+
+  .faq-page__container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .faq-page__title {
+    @apply font-mono font-bold text-3xl md:text-5xl text-brand-dark mb-4;
+  }
+
+
+  .faq-tabs {
+    @apply flex gap-2 mb-8 overflow-x-auto pb-2 -mx-4 px-4;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .faq-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Кнопка категории */
+  .faq-tab {
+    @apply flex-shrink-0 px-5 py-3 
+           font-mono text-sm uppercase tracking-wider
+           text-brand-light bg-transparent 
+           cursor-pointer whitespace-nowrap
+           transition-all duration-200
+           hover:text-brand-light hover:border-brand-light/60
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded;
+  }
+
+  /* Активная категория */
+  .faq-tab.is-active {
+    @apply text-brand-teal font-bold border-brand-teal;
+  }
+
+  .faq-category {
+    @apply hidden;
+  }
+
+  .faq-category.is-active {
+    @apply block;
+  }
+
+  .faq-item {
+    @apply border-b border-gray-200 last:border-0;
+  }
+
+  /* Кнопка вопроса */
+  .faq-item__question {
+    @apply w-full flex items-center justify-between gap-4 py-5 text-left 
+           font-sans text-base md:text-lg font-semibold text-brand-dark 
+           bg-transparent border-0 cursor-pointer
+           transition-colors duration-200
+           hover:text-brand-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded;
+  }
+
+  /* + */
+  .faq-item__icon {
+    @apply flex-shrink-0 w-8 h-8 flex items-center justify-center 
+           rounded-full bg-brand-light text-brand-teal font-mono text-xl font-bold
+           transition-all duration-300;
+  }
+
+  .faq-item__question[aria-expanded="true"] .faq-item__icon {
+    @apply text-white rotate-45;
+  }
+
+  .faq-item__answer {
+    @apply max-h-0 overflow-hidden transition-all duration-300 ease-in-out;
+  }
+
+  .faq-item__answer p {
+    @apply font-sans text-base text-gray-700 leading-relaxed pb-5 pr-12;
+  }
+}
