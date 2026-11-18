@@ -64,7 +64,7 @@
 }
 
 .header__nav-link {
-  @apply block w-full m-0 font-mono text-base md:text-2xl leading-relaxed text-white uppercase no-underline;
+  @apply block w-full m-0 font-mono text-base md:text-3xl leading-relaxed text-white uppercase no-underline;
   
   @apply transition-all duration-200 ease-in-out;
   

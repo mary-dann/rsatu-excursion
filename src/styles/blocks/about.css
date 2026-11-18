@@ -15,10 +15,6 @@
     @apply md:sticky md:top-32;
   }
 
-  .about__label {
-    @apply font-mono text-xs uppercase tracking-[0.2em] text-brand-teal mb-4;
-  }
-
   .about__title {
     @apply font-mono font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
            text-brand-dark leading-[1.05];

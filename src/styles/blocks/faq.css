@@ -8,9 +8,8 @@
   }
 
   .faq-page__title {
-    @apply font-mono font-bold text-3xl md:text-5xl text-brand-dark mb-4;
+    @apply font-mono font-bold text-3xl md:text-5xl text-brand-dark mb-4 pt-8;
   }
-
 
   .faq-tabs {
     @apply flex gap-2 mb-8 overflow-x-auto pb-2 -mx-4 px-4;
