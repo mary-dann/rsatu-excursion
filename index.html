@@ -22,31 +22,154 @@
 
     <nav class="header__nav" id="nav" aria-label="Основная навигация">
       <div class="header__nav-inner">
-        
-        <!-- Колонка 1:  -->
-        <div class="header__nav-column">          
-          <a href="https://www.rsatu.ru/" class="header__nav-link">РГАТУ</a>
-          <a href="/" class="header__nav-link">Курсы (?)</a>
-          <a href="/" class="header__nav-link">Олимпиады (?)</a>
-          <a href="https://www.rsatu.ru/dop/exam/" class="header__nav-link">Подготовка к ОГЭ и ЕГЭ</a>
-          <a href="https://www.rsatu.ru/ireactor/" class="header__nav-link">Интеллектуальный реактор</a>
-          <a href="/" class="header__nav-link">Кем стать? (?)</a>          
-          <a href="https://www.rsatu.ru/studlife/" class="header__nav-link">Студенческая жизнь</a>
-          <a href="/" class="header__nav-link">Приём 2026 (?)</a>
-          <a href="/rsatu-excursion/faq.html" class="header__nav-link">Часто задаваемые вопросы</a> 
-        </div>
 
-        <!-- Колонка 2: Навигация -->
         <div class="header__nav-column">
-          <h3 class="header__nav-title">Добро пожаловать</h3>
-          <ul class="header__menu">
-            <li class="header__menu-item"><a href="#calendar" class="header__menu-link">Календар мероприятий</a></li>
-            <li class="header__menu-item"><a href="https://www.rsatu.ru/sveden/common/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Об университете</a></li>
-            <li class="header__menu-item"><a href="#contacts" class="header__menu-link">Контакты</a></li>
+          <ul class="header__categories-list">
+            <li>
+              <button class="header__nav-categories is-active" data-category="rgatu" type="button">РГАТУ</button>
+            </li>
+            <li>
+              <button class="header__nav-categories" data-category="courses" type="button">Курсы</button>
+            </li>
+            <li>
+              <button class="header__nav-categories" data-category="applicants" type="button">Поступающим</button>
+            </li>
+            <li>
+              <button class="header__nav-categories" data-category="professions" type="button">Кем стать?</button>
+            </li>
+            <li>
+              <button class="header__nav-categories" data-category="faq" type="button">Вопросы</button>
+            </li>
           </ul>
         </div>
 
-        
+        <div class="header__nav-column header__nav-content">
+          <div class="header__category-content is-active" id="category-rgatu">
+            <h3 class="header__nav-title">Добро пожаловать</h3>
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/sveden/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Сведения об образовательной организации</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/history/" class="header__menu-link" target="_blank" rel="noopener noreferrer">История</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/foreign-students/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Стань студентом РГАТУ</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/partners/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Партнёры</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/administration/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Руководство</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/members/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Преподаватели и сотрудники</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/institutions-and-departments/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Институты, кафедры и филиалы</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/zaochnoe/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Факультет заочного образования</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/struct/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Подразделения</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/foreign-students/university/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Кампус</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/document/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Справочник документов</a>
+              </li>
+
+
+
+              <li class="header__menu-item">
+                <a href="#calendar" class="header__menu-link">Календарь мероприятий</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#contacts" class="header__menu-link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Курсы -->
+          <div class="header__category-content" id="category-courses">
+            <h3 class="header__nav-title">Курсы для школьников</h3>
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/dop/exam/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Подготовка к ОГЭ и ЕГЭ</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/ireactor/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Интеллектуальный реактор</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Поступающим -->
+          <div class="header__category-content" id="category-applicants">
+            <h3 class="header__nav-title">Поступающим</h3>
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Центр по работе с абитуриентами</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Образовательные программы</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Бакалавриат и специалитет</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Магистратура</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Аспирантура</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Докторантура</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Целевое обучение</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Иногородним абитуриентам</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Образовательный кредит</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Кем стать -->
+          <div class="header__category-content" id="category-professions">
+            <h3 class="header__nav-title">Кем стать?</h3>
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Центр карьеры</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">...</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">...</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Помощь -->
+          <div class="header__category-content" id="category-faq">
+            <h3 class="header__nav-title">Помощь</h3>
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a href="/rsatu-excursion/faq.html" class="header__menu-link">Часто задаваемые вопросы</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#contacts" class="header__menu-link">Задать свой вопрос</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
       </div>
     </nav>
   
