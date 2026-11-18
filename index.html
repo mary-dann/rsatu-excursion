@@ -11,7 +11,7 @@
   <header class="header" id="header">
     <div class="header__container">
       
-      <a href="index.html" class="header__logo" aria-label="РГАТУ — на главную">
+      <a href="https://www.rsatu.ru/" class="header__logo" aria-label="РГАТУ — на главную">
         <img src="/src/images/logos/rgatu-logo-white.svg" alt="РГАТУ" class="header__logo-img" width="140" height="44">
       </a>
       <button class="header__burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
@@ -22,31 +22,155 @@
 
     <nav class="header__nav" id="nav" aria-label="Основная навигация">
       <div class="header__nav-inner">
-        
-        <!-- Колонка 1:  -->
-        <div class="header__nav-column">          
-          <a href="https://www.rsatu.ru/" class="header__nav-link">РГАТУ</a>
-          <a href="/" class="header__nav-link">Курсы (?)</a>
-          <a href="/" class="header__nav-link">Олимпиады (?)</a>
-          <a href="https://www.rsatu.ru/dop/exam/" class="header__nav-link">Подготовка к ОГЭ и ЕГЭ</a>
-          <a href="https://www.rsatu.ru/ireactor/" class="header__nav-link">Интеллектуальный реактор</a>
-          <a href="/" class="header__nav-link">Кем стать? (?)</a>          
-          <a href="https://www.rsatu.ru/studlife/" class="header__nav-link">Студенческая жизнь</a>
-          <a href="/" class="header__nav-link">Приём 2026 (?)</a>
-          <a href="/rsatu-excursion/faq.html" class="header__nav-link">Часто задаваемые вопросы</a> 
-        </div>
 
-        <!-- Колонка 2: Навигация -->
         <div class="header__nav-column">
-          <h3 class="header__nav-title">Добро пожаловать</h3>
-          <ul class="header__menu">
-            <li class="header__menu-item"><a href="#calendar" class="header__menu-link">Календар мероприятий</a></li>
-            <li class="header__menu-item"><a href="https://www.rsatu.ru/sveden/common/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Об университете</a></li>
-            <li class="header__menu-item"><a href="#contacts" class="header__menu-link">Контакты</a></li>
+          <ul class="header__categories-list">
+            <li>
+              <button class="header__nav-categories is-active" data-category="rgatu" type="button">РГАТУ</button>
+            </li>
+            <li>
+              <button class="header__nav-categories" data-category="courses" type="button">Курсы</button>
+            </li>
+            <li>
+              <button class="header__nav-categories" data-category="applicants" type="button">Поступающим</button>
+            </li>
+            <li>
+              <button class="header__nav-categories" data-category="professions" type="button">Кем стать?</button>
+            </li>
+            <li>
+              <button class="header__nav-categories" data-category="faq" type="button">Вопросы</button>
+            </li>
           </ul>
         </div>
 
-        
+        <div class="header__nav-column header__nav-content">
+          <div class="header__category-content is-active" id="category-rgatu">
+            <h3 class="header__nav-title">Добро пожаловать</h3>
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/sveden/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Сведения об образовательной организации</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/history/" class="header__menu-link" target="_blank" rel="noopener noreferrer">История</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/foreign-students/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Стань студентом РГАТУ</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/partners/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Партнёры</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/administration/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Руководство</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/members/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Преподаватели и сотрудники</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/institutions-and-departments/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Институты, кафедры и филиалы</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/zaochnoe/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Факультет заочного образования</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/struct/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Подразделения</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/foreign-students/university/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Кампус</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/university/document/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Справочник документов</a>
+              </li>
+            </ul>
+          </div>
+
+
+            <li class="header__menu-item">
+                <a href="/rsatu-excursion/calendar.html" class="header__menu-link">Календарь мероприятий</a>
+              </li>
+              <!-- 
+              <li class="header__menu-item">
+                <a href="#contacts" class="header__menu-link">Контакты</a>
+              </li> -->
+
+
+          <!-- Курсы -->
+          <div class="header__category-content" id="category-courses">
+            <h3 class="header__nav-title">Курсы для школьников</h3>
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/dop/exam/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Подготовка к ОГЭ и ЕГЭ</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/ireactor/" class="header__menu-link" target="_blank" rel="noopener noreferrer">Интеллектуальный реактор</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Поступающим -->
+          <div class="header__category-content" id="category-applicants">
+            <h3 class="header__nav-title">Поступающим</h3>
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/applicants/the_admissions_committee/" class="header__menu-link">Центр по работе с абитуриентами</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/applicants/programs/" class="header__menu-link">Образовательные программы</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/applicants/bakalavriat-i-spetsialitet/" class="header__menu-link">Бакалавриат и специалитет</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/applicants/magistr/" class="header__menu-link">Магистратура</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/applicants/postgraduate/" class="header__menu-link">Аспирантура</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/applicants/doctorate/" class="header__menu-link">Докторантура</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/applicants/target/" class="header__menu-link">Целевое обучение</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/applicants/nonresident/" class="header__menu-link">Иногородним абитуриентам</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/applicants/obrazovatelnyy-kredit/" class="header__menu-link">Образовательный кредит</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Кем стать -->
+          <div class="header__category-content" id="category-professions">
+            <h3 class="header__nav-title">Кем стать?</h3>
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a href="https://www.rsatu.ru/graduates/" class="header__menu-link">Центр карьеры</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">...</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">...</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Помощь -->
+          <div class="header__category-content" id="category-faq">
+            <h3 class="header__nav-title">Помощь</h3>
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a href="/rsatu-excursion/faq.html" class="header__menu-link">Часто задаваемые вопросы</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#contacts" class="header__menu-link">Задать свой вопрос</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
       </div>
     </nav>
   
@@ -59,16 +183,12 @@
       </div>
       
       <div class="hero__content">
-        <p class="hero__eyebrow">РГАТУ имени П.А. Соловьева приглашает</p>
+        <p class="hero__subtitle">РГАТУ имени П.А. Соловьева приглашает</p>
         <h1 class="hero__title">Экскурсии<br>для школьников</h1>
         <p class="hero__subtitle">Побывай в лабораториях, познакомься со студентами и почувствуй атмосферу университета</p>
         <a href="#signup" class="hero__cta">Записаться на экскурсию</a>
       </div>
       
-      <div class="hero__scroll-hint" aria-hidden="true">
-        <span class="hero__scroll-text">Листай вниз</span>
-        <span class="hero__scroll-arrow"></span>
-      </div>
     </section>
 
     <!-- блок текста-->
@@ -76,7 +196,6 @@
       <div class="about__container">
         <div class="about__grid">
           <div class="about__left">
-            <p class="about__label">Что вас ждёт</p>
             <h2 class="about__title">
               Один день<br>
               из жизни<br>
@@ -85,21 +204,30 @@
           </div>
           
           <div class="about__right">
-            <p class="about__text">
-              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
-              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
-              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
-              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
-              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
-              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
-
+            <p class="about__text">              
+              В этом году экскурсия превратилась в настоящее погружение в профессию. 
+              На интерактивных площадках кафедр вы своими руками поработаете с оборудованием и проведете эксперименты.                     
             </p>
+
             <p class="about__text">
-              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
-              Мы проводим экскурсии для школьников 9–11 классов и их родителей.
-              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
-              Мы проводим экскурсии для школьников 9–11 классов и их родителей. 
-              
+              Особое внимание уделено Передовой инженерной школе «Технологии двигателестроения» и 
+              уникальным образовательным программам.
+            </p>
+            <p class="about__text"> 
+              Индустриальные партнёры — ПАО «ОДК-Сатурн», АО «ОДК-Газовые турбины», 
+              АО «Рыбинский завод приборостроения», ООО НПО «Криста», АО КБ «Луч», ООО «Верфь братьев Нобель» 
+              и ГК «Технопарк» — расскажут о реальных карьерных перспективах.
+              Их представители расскажут, какие карьерные перспективы ждут выпускников РГАТУ.
+            </p>
+
+            <p class="about__text">              
+              С вами пообщаются не только преподаватели, но и сами студенты — они честно расскажут о 
+              студенческой жизни, творческих объединениях и спортивных секциях.                
+              Вы также узнаете о строительстве нового кампуса мирового уровня «Меркурий».
+            </p>
+            <p class="about__text">  
+              Мы обновили программу: теперь экскурсии открыты для школьников, 
+              родителей и групп из образовательных комплексов. Приезжайте, смотрите и пробуйте! 
             </p>
             
             <div class="about__stats">
@@ -126,7 +254,6 @@
       <div class="filmstrip__header">
         <div class="filmstrip__container">
           <h2 class="filmstrip__title">Как проходят экскурсии</h2>
-          <p class="filmstrip__subtitle">Листайте, чтобы увидеть больше</p>
         </div>
         
         <div class="filmstrip__controls">

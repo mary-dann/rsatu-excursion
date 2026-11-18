@@ -100,6 +100,26 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   updateHeader();
 
+
+  // Переключение категорий в меню
+  const categoryBtns = document.querySelectorAll('.header__nav-categories');
+  const categoryContents = document.querySelectorAll('.header__category-content');
+
+  categoryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.dataset.category;
+
+      // Переключаем активную кнопку
+      categoryBtns.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      // Переключаем контент
+      categoryContents.forEach(content => content.classList.remove('is-active'));
+      const target = document.getElementById(`category-${category}`);
+      if (target) target.classList.add('is-active');
+    });
+  });
+
   // Слайдер в Hero-секции 
   const slider = document.getElementById('hero-slider');
   if (slider) {

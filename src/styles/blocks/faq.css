@@ -8,7 +8,11 @@
   }
 
   .faq-page__title {
+<<<<<<< HEAD
     @apply font-mono font-bold text-3xl md:text-5xl text-brand-dark mb-12 mt-12;
+=======
+    @apply font-mono font-bold text-3xl md:text-5xl text-brand-blue mb-4 pt-8;
+>>>>>>> 6daa85124f40595c9f3041d6f14988941c595536
   }
 
   .faq-tabs {

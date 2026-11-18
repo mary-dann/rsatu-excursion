@@ -8,6 +8,7 @@
 @import "./blocks/footer.css";
 @import "./blocks/lightbox.css";
 @import "./blocks/faq.css";
+@import "./blocks/calendar.css";
 
 @theme {
   /* Фирменные цвета */

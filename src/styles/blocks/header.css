@@ -1,91 +1,114 @@
-.header {
-  @apply fixed inset-x-0 top-0 z-30 bg-brand-dark border-b border-brand-dark/10;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  will-change: transform;
-}
-
-.header.is-hidden {
-  @apply -translate-y-full;
-}
-
-.header.is-scrolled {
-  @apply shadow-lg;
-}
-
-.header.is-open {
-  @apply z-50;
-}
-
-@media (prefers-reduced-motion: reduce) {
+@layer components{
   .header {
-    transition: none;
-  }
-}
-
-.header__container {
-  @apply mx-auto flex max-w-7xl items-center justify-between gap-8 px-6 min-h-[72px];
-}
-
-.header__logo {
-  @apply inline-flex shrink-0 items-center no-underline;
-}
-
-.header__logo-img {
-  @apply block h-11 w-auto;
-}
-
-/* Навигация */
-.header__nav {
-    @apply fixed inset-x-0 bottom-0 z-50 bg-brand-dark text-white
-           opacity-0 pointer-events-none
-           transition-opacity duration-300 ease-in-out;
-    top: var(--header-height, 72px);
+    @apply fixed inset-x-0 top-0 z-30 bg-brand-dark border-b border-brand-dark/10;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
   }
 
-.header__nav.is-open {
-    @apply opacity-100 pointer-events-auto;
+  .header.is-hidden {
+    @apply -translate-y-full;
   }
 
-.header__nav-inner {
-    @apply mx-auto grid h-full max-w-7xl grid-cols-1 gap-10 overflow-y-auto px-6 py-12
-           md:grid-cols-2 md:gap-16 md:py-16;
+  .header.is-scrolled {
+    @apply shadow-lg;
   }
 
-.header__nav-column {
-    @apply flex flex-col gap-6;
+  .header.is-open {
+    @apply z-50;
   }
 
-.header__nav-title {
-    @apply m-0 font-mono text-xs uppercase tracking-[0.25em] text-brand-teal;
+  @media (prefers-reduced-motion: reduce) {
+    .header {
+      transition: none;
+    }
+  }
+
+  .header__container {
+    @apply mx-auto flex max-w-7xl items-center justify-between gap-8 px-6 min-h-[72px];
+  }
+
+  .header__logo {
+    @apply inline-flex shrink-0 items-center no-underline;
+  }
+
+  .header__logo-img {
+    @apply block h-11 w-auto;
+  }
+
+  /* Навигация */
+  .header__nav {
+      @apply fixed inset-x-0 bottom-0 z-50 bg-brand-dark text-white
+            opacity-0 pointer-events-none
+            transition-opacity duration-300 ease-in-out;
+      top: var(--header-height, 72px);
+    }
+
+  .header__nav.is-open {
+      @apply opacity-100 pointer-events-auto;
+    }
+
+  .header__nav-inner {
+      @apply mx-auto grid max-w-7xl grid-cols-1 gap-10 overflow-y-auto px-6 py-12
+            md:grid-cols-2 md:gap-16 md:py-16;
+    }
+
+  .header__nav-column {
+      @apply flex flex-col gap-6;
+    }
+
+  .header__nav-title {
+      @apply m-0 font-mono text-sm uppercase tracking-[0.25em] text-brand-teal md:mt-0 mt-8;
   }  
 
-.header__nav-text {
-  @apply m-0 font-mono text-sm sm:text-base md:text-2xl leading-relaxed text-white uppercase;
-}
+  .header__nav-text {
+    @apply m-0 font-mono text-sm sm:text-base md:text-2xl leading-relaxed text-white uppercase;
+  }
 
-.header__nav-link {
-  @apply block w-full m-0 font-mono text-base md:text-2xl leading-relaxed text-white uppercase no-underline;
-  
-  @apply transition-all duration-200 ease-in-out;
-  
-  @apply hover:translate-x-2 hover:text-brand-teal;
-}
+  .header__nav-categories {
+    @apply block w-full text-left
+           font-mono text-xl md:text-5xl font-bold text-brand-light/60 uppercase
+           bg-transparent 
+           cursor-pointer py-2 px-3 no-underline
+           transition-all duration-200 ease-in-out
+           hover:translate-x-2 hover:text-white hover:border-brand-teal
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded;
+  }
 
-.header__menu {
-  @apply m-0 flex flex-col list-none gap-2 p-0;
-}
+  /* Активная категория */
+  .header__nav-categories.is-active {
+    @apply text-white border-brand-teal bg-white/5 translate-x-2;
+  }
 
-.header__menu-item {
-  @apply relative;
-}
+  .header__category-content {
+    @apply hidden flex-col gap-6;
+  }
 
-.header__menu-link {
-  @apply inline-block whitespace-nowrap rounded-lg px-3.5 py-2.5 text-[15px] font-medium text-white no-underline transition-colors duration-200;
-  @apply hover:text-sky focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue;
-}
+  .header__category-content.is-active {
+    @apply flex;
+    animation: fadeIn 0.3s ease-out; 
+  }
 
-/* CTA-кнопки */
-.header__cta {
+  /* Анимация появления контента */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateX(10px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  .header__menu {
+    @apply m-0 flex flex-col list-none gap-2 p-0;
+  }
+
+  .header__menu-item {
+    @apply relative;
+  }
+
+  .header__menu-link {
+    @apply inline-block whitespace-nowrap rounded-lg px-3.5 py-2.5 text-[15px] font-medium text-white no-underline transition-colors duration-200;
+    @apply hover:text-sky focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue;
+  }
+
+  /* CTA-кнопки */
+  .header__cta {
     @apply mt-2 inline-flex items-center justify-center rounded-lg bg-brand-red px-6 py-4
            font-mono text-base font-bold text-white no-underline
            shadow-lg transition-all duration-200
@@ -93,65 +116,87 @@
            focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red;
   }
 
-/* Бургер */
-.header__burger {
-  @apply inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border-0 bg-transparent p-0 cursor-pointer text-white transition-colors duration-200;
-  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue;
-}
-
-.header__burger-icon {
-  @apply relative block h-0.5 w-6 bg-current transition-colors duration-200;
-}
-
-.header__burger-icon::before,
-.header__burger-icon::after {
-  content: "";
-  @apply absolute left-0 block h-0.5 w-6 bg-current transition-transform duration-200;
-}
-
-.header__burger-icon::before {
-  @apply -top-2;
-}
-
-.header__burger-icon::after {
-  @apply top-2;
-}
-
-/* Состояние "открыто" — крестик */
-.header__burger[aria-expanded="true"] .header__burger-icon {
-  @apply bg-transparent;
-}
-
-.header__burger[aria-expanded="true"] .header__burger-icon::before {
-  @apply top-0 rotate-45;
-}
-
-.header__burger[aria-expanded="true"] .header__burger-icon::after {
-  @apply top-0 -rotate-45;
-}
-
-/* Адаптивность */
-@media (max-width: 480px) {
-  .header__container { @apply px-4; }
-  .header__slogan { @apply px-4 text-xs; }
-  .header__logo-img { @apply h-9; }
-  .header__cta { @apply px-4 py-2 text-sm; }
-  .header__nav-inner { @apply px-4 py-8; }
-  .header__menu-link { @apply text-xl; }
-}
-
-body.overflow-hidden {
-    @apply overflow-hidden;
+  /* Бургер */
+  .header__burger {
+    @apply inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border-0 bg-transparent p-0 cursor-pointer text-white transition-colors duration-200;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue;
   }
 
+  .header__burger-icon {
+    @apply relative block h-0.5 w-6 bg-current transition-colors duration-200;
+  }
 
-@media (prefers-reduced-motion: reduce) {
-  .header__menu-link,
-  .header__cta,
-  .header__burger,
-  .header__burger-icon,
   .header__burger-icon::before,
   .header__burger-icon::after {
-    @apply transition-none;
+    content: "";
+    @apply absolute left-0 block h-0.5 w-6 bg-current transition-transform duration-200;
   }
+
+  .header__burger-icon::before {
+    @apply -top-2;
+  }
+
+  .header__burger-icon::after {
+    @apply top-2;
+  }
+
+  /* Состояние "открыто" — крестик */
+  .header__burger[aria-expanded="true"] .header__burger-icon {
+    @apply bg-transparent;
+  }
+
+  .header__burger[aria-expanded="true"] .header__burger-icon::before {
+    @apply top-0 rotate-45;
+  }
+
+  .header__burger[aria-expanded="true"] .header__burger-icon::after {
+    @apply top-0 -rotate-45;
+  }
+
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .header__nav-inner {
+      @apply px-4 py-8 gap-4;
+    }
+    .header__nav-categories {
+      @apply text-lg md:text-2xl py-1.5 px-2;
+    }
+    .header__nav-title {
+      @apply text-[10px] mb-1;
+    }
+    .header__menu-link {
+      @apply text-sm px-2 py-2;
+    }
+    .header__nav-text {
+      @apply text-xs;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header__nav-inner {
+      @apply px-3 py-6 gap-2;
+    }
+    .header__nav-categories {
+      @apply text-base py-1;
+    }
+    .header__menu-link {
+      @apply text-sm py-1.5;
+    }
+  }
+
+  body.overflow-hidden {
+      @apply overflow-hidden;
+    }
+
+  @media (prefers-reduced-motion: reduce) {
+    .header__menu-link,
+    .header__cta,
+    .header__burger,
+    .header__burger-icon,
+    .header__burger-icon::before,
+    .header__burger-icon::after {
+      @apply transition-none;
+    }
+  }
+
 }
