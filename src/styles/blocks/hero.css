@@ -1,6 +1,6 @@
 @layer components {
   .hero {
-    @apply relative w-full h-screen overflow-hidden z-0;
+    @apply relative w-full h-screen overflow-hidden z-0 rounded-b-[32px] mb-[-40px] relative z-30;
   }
 
   .hero__bg {

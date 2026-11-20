@@ -1,6 +1,6 @@
 @layer components{
   .about {
-    @apply w-full min-h-screen bg-white py-20 md:py-32 flex items-center;
+    @apply w-full min-h-screen bg-white py-20 md:py-32 flex items-center rounded-b-[32px] mb-[-40px] relative z-20;
   }
 
   .about__container {
