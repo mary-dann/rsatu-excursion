@@ -9,6 +9,7 @@
 @import "./blocks/lightbox.css";
 @import "./blocks/faq.css";
 @import "./blocks/calendar.css";
+@import "./blocks/labs.css";
 
 @theme {
   /* Фирменные цвета */

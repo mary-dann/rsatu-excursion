@@ -1,0 +1,56 @@
+@layer components {  
+  .labs {
+    @apply w-full bg-brand-light py-16 md:py-24;
+  }
+
+  .labs__container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Шапка блока */
+  .labs__header {
+    @apply mb-12 max-w-2xl;
+  }
+
+  .labs__title {
+    @apply font-mono font-bold text-3xl sm:text-4xl md:text-5xl text-brand-dark mb-4 leading-tight;
+  }
+
+  .labs__subtitle {
+    @apply font-sans text-lg text-gray-600 leading-relaxed;
+  }
+
+  /* Сетка карточек */
+  .labs__grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .lab-card {
+    @apply bg-white border border-brand-light/50 
+           rounded-xl p-6 shadow-sm 
+           hover:shadow-xl hover:-translate-y-1 
+           transition-all duration-300 flex flex-col;
+  }
+
+  .lab-card__icon {
+    @apply text-4xl mb-4;
+  }
+
+  .lab-card__title {
+    @apply font-sans text-xl font-bold text-brand-dark mb-3 leading-snug;
+  }
+
+  .lab-card__desc {
+    @apply font-sans text-sm text-gray-600 leading-relaxed mb-4 flex-1;
+  }
+
+  /* Теги возможностей */
+  .lab-card__features {
+    @apply flex flex-wrap gap-2 pt-4 border-t border-brand-light/30;
+  }
+
+  .lab-card__feature {
+    @apply font-mono text-xs px-3 py-1 
+           bg-brand-light/50 text-brand-dark rounded-full;
+  }
+}

@@ -1,0 +1,122 @@
+@layer components {
+  .calendar {
+    @apply w-full bg-white py-16 md:py-24;
+  }
+
+  .calendar__container {
+    @apply max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Шапка блока */
+  .calendar__header {
+    @apply mb-12 max-w-2xl;
+  }
+
+  .calendar__label {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-brand-teal mb-3;
+  }
+
+  .calendar__title {
+    @apply font-mono font-bold text-3xl sm:text-4xl md:text-5xl text-brand-dark mb-4 leading-tight;
+  }
+
+  .calendar__subtitle {
+    @apply font-sans text-lg text-gray-600 leading-relaxed;
+  }
+
+  .calendar__grid {
+  @apply flex gap-6 overflow-x-auto pb-4;
+  scroll-snap-type: x mandatory; 
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand-teal) transparent;
+}
+
+.calendar-card {
+@apply relative bg-white border border-brand-light/50 
+         rounded-xl overflow-hidden shadow-sm 
+         hover:shadow-xl hover:-translate-y-1 
+         transition-all duration-300 flex flex-col
+         flex-shrink-0 w-80;
+scroll-snap-align: start;
+}
+
+  .calendar__grid::-webkit-scrollbar {
+  @apply h-2;
+}
+
+.calendar__grid::-webkit-scrollbar-track {
+  @apply bg-brand-light/30 rounded-full;
+}
+
+.calendar__grid::-webkit-scrollbar-thumb {
+  @apply bg-brand-teal rounded-full;
+}
+
+
+
+  /* Блок с датой */
+  .calendar-card__date {
+    @apply bg-brand-dark text-white p-4 flex items-baseline gap-2;
+  }
+
+  .calendar-card__day {
+    @apply font-mono text-4xl font-bold leading-none;
+  }
+
+  .calendar-card__month {
+    @apply font-mono text-sm uppercase tracking-wider text-brand-light/80;
+  }
+
+  /* Контент карточки */
+  .calendar-card__content {
+    @apply p-6 flex flex-col flex-1;
+  }
+
+  .calendar-card__tag {
+    @apply font-mono text-[10px] uppercase tracking-widest text-brand-blue font-bold mb-3;
+  }
+
+  .calendar-card__title {
+    @apply font-sans text-xl font-bold text-brand-dark mb-3 leading-snug;
+  }
+
+  /* Мета-информация */
+  .calendar-card__meta {
+    @apply font-mono text-sm text-gray-500 mb-4 flex items-center gap-2;
+  }
+
+  .calendar-card__time {
+    @apply font-bold text-brand-dark;
+  }
+
+  .calendar-card__dot {
+    @apply text-brand-light;
+  }
+
+  .calendar-card__desc {
+    @apply font-sans text-sm text-gray-600 leading-relaxed mb-6 flex-1;
+  }
+
+  /* Подвал карточки */
+  .calendar-card__footer {
+    @apply flex items-center justify-between gap-4 pt-4 border-t border-brand-light/30;
+  }
+
+  .calendar-card__status {
+    @apply font-mono text-xs font-bold uppercase tracking-wide;
+  }
+
+  .calendar-card__status--few {
+    @apply text-brand-red;
+  }
+
+  .calendar-card__status--ok {
+    @apply text-brand-teal;
+  }
+
+  .calendar-card__btn {
+    @apply font-mono text-xs font-bold uppercase tracking-wider 
+           text-brand-dark hover:text-brand-blue 
+           no-underline transition-colors duration-200;
+  }
+}
