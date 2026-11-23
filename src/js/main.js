@@ -1,6 +1,7 @@
 import '../styles/main.css';
 import { initLightbox } from './modules/lightbox.js';
 import { initFaqAccordion } from './modules/faq.js';
+import { initRevealAnimations } from './modules/reveal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.getElementById('burger');
@@ -29,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
       burger.setAttribute('aria-expanded', String(isOpen));
       burger.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
       document.body.classList.toggle('overflow-hidden', isOpen);
+
+      
 
       if (isOpen) {
         headerEl.style.zIndex = '9999';
@@ -240,4 +243,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initLightbox();   
   initFaqAccordion();
+  initRevealAnimations(); 
 });

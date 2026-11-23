@@ -81,3 +81,57 @@ main {
 [id] {
   scroll-margin-top: calc(var(--header-height) + 16px);
 }
+
+/* Анимации появления при скролле */
+.reveal {
+  opacity: 0;
+  transform: translateY(80px); /* По умолчанию выезжает снизу вверх */
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Вариант: выезд слева (для заголовков) */
+.reveal--left {
+  transform: translateX(-80px);
+}
+
+/* Вариант: выезд справа (для текста/фото) */
+.reveal--right {
+  transform: translateX(80px);
+}
+
+/* Вариант: масштабирование (для иконок или мелких элементов) */
+.reveal--scale {
+  transform: scale(0.9);
+}
+
+/* Класс, который добавляет JS, когда элемент появился в зоне видимости */
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Каскадная задержка для сеток */
+.stagger > *:nth-child(1) { transition-delay: 0s; }
+.stagger > *:nth-child(2) { transition-delay: 0.15s; }
+.stagger > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger > *:nth-child(4) { transition-delay: 0s; }
+.stagger > *:nth-child(5) { transition-delay: 0.15s; }
+.stagger > *:nth-child(6) { transition-delay: 0.3s; }
+.stagger > *:nth-child(7) { transition-delay: 0s; } 
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  @media (max-width: 768px) {
+    .reveal { transform: translateY(50px); }
+    .reveal--left { transform: translateX(-50px); }
+    .reveal--right { transform: translateX(50px); }
+  }
+
+}
