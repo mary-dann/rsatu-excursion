@@ -195,54 +195,56 @@
     <section class="about" id="about" aria-label="Об экскурсиях">
       <div class="about__container">
         <div class="about__grid">
-          <div class="about__left">
-            <h2 class="about__title">
-              Один день<br>
-              из жизни<br>
-              <span class="about__title-accent">студента</span>
+          <div class="about__left stagger">
+            <h2 class="about__title reveal reveal--left">Один день</h2>
+            <h2 class="about__title reveal reveal--left">из жизни</h2>
+
+            <h2 class="about__title reveal reveal--left">
+              <span class="about__title-accent">студента</span> 
             </h2>
+            
           </div>
           
           <div class="about__right">
-            <p class="about__text">              
+            <p class="about__text reveal reveal--right">              
               В этом году экскурсия превратилась в настоящее погружение в профессию. 
               На интерактивных площадках кафедр вы своими руками поработаете с оборудованием и проведете эксперименты.                     
             </p>
 
-            <p class="about__text">
+            <p class="about__text reveal reveal--right">
               Особое внимание уделено Передовой инженерной школе «Технологии двигателестроения» и 
               уникальным образовательным программам.
             </p>
-            <p class="about__text"> 
+            <p class="about__text reveal reveal--right"> 
               Индустриальные партнёры — ПАО «ОДК-Сатурн», АО «ОДК-Газовые турбины», 
               АО «Рыбинский завод приборостроения», ООО НПО «Криста», АО КБ «Луч», ООО «Верфь братьев Нобель» 
               и ГК «Технопарк» — расскажут о реальных карьерных перспективах.
               Их представители расскажут, какие карьерные перспективы ждут выпускников РГАТУ.
             </p>
 
-            <p class="about__text">              
+            <p class="about__text reveal reveal--right">              
               С вами пообщаются не только преподаватели, но и сами студенты — они честно расскажут о 
               студенческой жизни, творческих объединениях и спортивных секциях.                
               Вы также узнаете о строительстве нового кампуса мирового уровня «Меркурий».
             </p>
-            <p class="about__text">  
+            <p class="about__text reveal reveal--right">  
               Мы обновили программу: теперь экскурсии открыты для школьников, 
               родителей и групп из образовательных комплексов. Приезжайте, смотрите и пробуйте! 
             </p>
             
+            <!--
             <div class="about__stats">
               <div class="about__stat">
                 <span class="about__stat-number">7</span>
                 <span class="about__stat-label">лабораторий</span>
               </div>
               <div class="about__stat">
-                <span class="about__stat-number">20</span>
+                <span class="about__stat-number">до 20</span>
                 <span class="about__stat-label">человек в группе</span>
               </div>
-              <div class="about__stat">
-                <span class="about__stat-number">2 часа</span>
-                <span class="about__stat-label">длится экскурсия</span>
-              </div>
+              
+            -->
+
             </div>
           </div>
         </div>
@@ -253,17 +255,16 @@
     <section class="labs" id="labs" aria-label="Лаборатории университета">
       <div class="labs__container">
         
-        <div class="labs__header">
-          <h2 class="labs__title reveal reveal--left">Дуальные лаборатории передовой инженерной школы</h2>
-          <p class="labs__subtitle">
+        <div class="labs__header stagger">
+          <h2 class="labs__title reveal reveal--left">Дуальные лаборатории передовой</h2>
+          <h2 class="labs__title reveal reveal--left">инженерной школы</h2>
+          <p class="labs__subtitle reveal reveal--left">
             Современные пространства, где теория встречается с практикой. 
             Здесь вы увидите оборудование, с которым работают инженеры будущего.
           </p>
         </div>
 
-        <div class="labs__grid stagger">
-
-          
+        <div class="labs__grid stagger">          
           
           <article class="lab-card reveal">
             <div class="lab-card__icon">...</div>
@@ -276,6 +277,21 @@
               <span class="lab-card__feature">промышленный дизайн</span>
               <span class="lab-card__feature">создание виртуальных прототипов технических систем любой сложности</span>
             </div>
+
+
+            <!-- Раскрывающийся блок -->
+            <div class="lab-card__extra">
+              <img src="" alt="Образ" class="lab-card__extra-img">
+              <p class="lab-card__extra-text">
+                 -- описание -- <br>
+                  -- описание -- <br>
+                   -- описание -- <br>
+                    -- описание -- <br>
+                Студенты здесь работают с топовыми графическими станциями. 
+                Вы сможете создать 3D-модель турбины и распечатать её на промышленном 3D-принтере.
+              </p>
+            </div>
+
           </article>
 
 
@@ -289,6 +305,14 @@
               <span class="lab-card__feature">физическое моделирование</span>
               <span class="lab-card__feature">валидация цифровых моделей элементов газотурбинных двигателей</span>
             </div>
+
+            <!-- Раскрывающийся блок -->
+            <div class="lab-card__extra">
+              <img src="" alt="..." class="lab-card__extra-img">
+              <p class="lab-card__extra-text"> ...
+              </p>
+            </div>
+
           </article>
 
 
@@ -368,7 +392,7 @@
     <!-- фото с мероприятий -->
     <section class="filmstrip" id="gallery" aria-label="Фото с прошлых экскурсий">
       <div class="filmstrip__header">
-        <div class="filmstrip__container">
+        <div class="filmstrip__container reveal reveal--left">
           <h2 class="filmstrip__title">Как проходят экскурсии</h2>
         </div>
         
@@ -396,7 +420,7 @@
           <img src="/src/images/photos/open-day-9.jpg" alt="фото 9" class="filmstrip__img" loading="lazy">
         </article>
 
-        <article class="filmstrip__frame">
+        <article class="filmstrip__frame ">
           <img src="/src/images/photos/open-day-8.jpg" alt="фото 8" class="filmstrip__img" loading="lazy">
         </article>
 
