@@ -27,7 +27,6 @@
     min-height: 1700px;
   }
 
-  /* Базовая фигура — ВИДНА ПО УМОЛЧАНИЮ */
   .lab-bubble {
     @apply absolute block cursor-pointer;
     width: 55%;
@@ -41,7 +40,6 @@
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* НЕЧЁТНЫЕ — слева, закруглены справа */
   .lab-bubble:nth-child(odd) {
     left: 0;
   }
@@ -50,7 +48,6 @@
     border-radius: 0 70% 70% 0 / 0 100% 100% 0;
   }
 
-  /* ЧЁТНЫЕ — справа, закруглены слева */
   .lab-bubble:nth-child(even) {
     right: 0;
   }
@@ -59,7 +56,7 @@
     border-radius: 70% 0 0 70% / 100% 0 0 100%;
   }
 
-  /* Вертикальный шаг зигзага */
+  /* Вертикальный шаг */
   .lab-bubble:nth-child(1) { top: 0;     z-index: 7; }
   .lab-bubble:nth-child(2) { top: 120px; z-index: 6; }
   .lab-bubble:nth-child(3) { top: 420px; z-index: 5; }
@@ -85,7 +82,7 @@
     @apply items-start text-left;
     padding-left: 3rem;
     padding-right: 2rem;
-    background: linear-gradient(to right, rgba(9, 29, 80, 0.9), rgba(9, 29, 80, 0.4), transparent);
+    background: linear-gradient(to right, rgba(199, 215, 228, 0.9), rgba(199, 215, 228, 0.2), transparent);
   }
 
   /* Текст у правых фигур */
@@ -93,7 +90,7 @@
     @apply items-end text-right;
     padding-left: 2rem;
     padding-right: 3rem;
-    background: linear-gradient(to left, rgba(9, 29, 80, 0.9), rgba(9, 29, 80, 0.4), transparent);
+    background: linear-gradient(to left, rgba(199, 215, 228, 0.9), rgba(199, 215, 228, 0.2), transparent);
   }
 
   .lab-bubble__title {
@@ -104,13 +101,12 @@
     @apply font-sans text-lg text-white/90 leading-snug max-w-md;
   }
 
- 
-
+  
   /* при наведении на фигуру — остальные тускнеют */
   .labs__cascade:has(.lab-bubble:hover) .lab-bubble:not(:hover) {
-    opacity: 0.3;
+    filter: brightness(0.5);
+    opacity: 0.5;
     transform: scale(0.98);
-    filter: grayscale(0.6);
   }
 
   /* наведённая фигура остаётся яркой и увеличивается */
