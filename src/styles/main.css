@@ -10,6 +10,7 @@
 @import "./blocks/faq.css";
 @import "./blocks/calendar.css";
 @import "./blocks/labs.css";
+@import "./blocks/signup.css"; 
 
 @theme {
   /* Фирменные цвета */
@@ -17,7 +18,7 @@
   --color-sky: #60A5FA;
   --color-brand-red: #FF0000;
   --color-brand-light: #C7D7E4;
-  --color-brand-dark: #091D50;
+  --color-brand-dark: #091D50;  
   --color-brand-teal: #3D737F;
   --color-brand-teal-dark: #325761; 
   

@@ -1,0 +1,128 @@
+@layer components {
+  .signup {
+    @apply w-full bg-white py-16 md:py-24 rounded-b-[32px] mb-[-40px] relative z-30;
+  }
+
+  .signup__container {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Шапка блока */
+  .signup__header {
+    @apply mb-12 text-center;
+  }
+
+  .signup__label {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-brand-teal mb-3;
+  }
+
+  .signup__title {
+    @apply font-mono font-bold text-3xl sm:text-4xl md:text-5xl text-brand-dark mb-4 leading-tight;
+  }
+
+  .signup__subtitle {
+    @apply font-sans text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto;
+  }
+
+  /* Форма */
+  .signup__form {
+    @apply bg-brand-light/30 rounded-2xl p-6 md:p-10 shadow-sm;
+  }
+
+  .signup__row {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6 mb-6;
+  }
+
+  .signup__field {
+    @apply flex flex-col;
+  }
+
+  .signup__field--full {
+    @apply mb-6;
+  }
+
+  .signup__label-field {
+    @apply font-mono text-xs uppercase tracking-wider text-brand-dark mb-2 font-bold;
+  }
+
+  .signup__input {
+    @apply w-full px-4 py-3 bg-white border-2 border-brand-light/50 
+           rounded-lg font-sans text-base text-brand-dark
+           placeholder:text-gray-400
+           focus:border-brand-teal focus:outline-none focus:ring-2 focus:ring-brand-teal/20
+           transition-all duration-200;
+  }
+
+  .signup__input::placeholder {
+    @apply text-gray-400;
+  }
+
+  .signup__textarea {
+    @apply resize-none;
+  }
+
+  .signup__input.error {
+    @apply border-brand-red bg-brand-red/5;
+  }
+
+  .signup__error {
+    @apply font-sans text-xs text-brand-red mt-1 hidden;
+  }
+
+  .signup__error.is-visible {
+    @apply block;
+  }
+
+  /* Действия */
+  .signup__actions {
+    @apply flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-4;
+  }
+
+  .signup__checkbox {
+    @apply flex items-start gap-2 cursor-pointer;
+  }
+
+  .signup__checkbox input[type="checkbox"] {
+    @apply w-4 h-4 mt-1 accent-brand-teal cursor-pointer;
+  }
+
+  .signup__checkbox-text {
+    @apply font-sans text-sm text-gray-600 leading-tight;
+  }
+
+  .signup__btn {
+    @apply relative px-8 py-3 bg-brand-teal text-white 
+           font-mono text-sm font-bold uppercase tracking-wider
+           rounded-lg border-2 border-brand-teal
+           hover:bg-transparent hover:text-brand-teal
+           focus:outline-none focus:ring-2 focus:ring-brand-teal/50
+           transition-all duration-300 cursor-pointer
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Успешная отправка */
+  .signup__success {
+    @apply mt-6 p-6 bg-brand-teal/10 border-2 border-brand-teal rounded-lg
+           flex items-center gap-4;
+  }
+
+  .signup__success-icon {
+    @apply w-12 h-12 flex items-center justify-center 
+           bg-brand-teal text-white rounded-full text-2xl font-bold flex-shrink-0;
+  }
+
+  .signup__success-text {
+    @apply font-sans text-base text-brand-dark font-medium;
+  }
+
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .signup__actions {
+      @apply flex-col items-stretch;
+    }
+
+    .signup__btn {
+      @apply w-full;
+    }
+  }
+}

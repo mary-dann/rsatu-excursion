@@ -1,15 +1,17 @@
-@layer components {  
+@layer components {
   .labs {
-    @apply w-full bg-brand-light py-16 md:py-24 rounded-b-[32px] mb-[-40px] relative z-10;
+    @apply w-full bg-brand-light py-16 md:py-24 relative z-10;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    margin-bottom: -40px;
   }
 
   .labs__container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply mx-auto;
   }
 
-  /* Шапка блока */
   .labs__header {
-    @apply mb-12;
+    @apply mb-12 text-center mx-auto;
   }
 
   .labs__title {
@@ -20,64 +22,176 @@
     @apply font-sans text-lg text-gray-600 leading-relaxed;
   }
 
-  /* Сетка карточек */
-  .labs__grid {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  .labs__cascade {
+    @apply relative;
+    min-height: 1700px;
   }
 
-  .lab-card {
-    @apply bg-white border border-brand-light/50 
-           rounded-xl p-6 shadow-sm 
-           hover:shadow-2xl hover:-translate-y-2 
-           transition-all duration-300 flex flex-col
-           overflow-hidden; 
+  /* Базовая фигура — ВИДНА ПО УМОЛЧАНИЮ */
+  .lab-bubble {
+    @apply absolute block cursor-pointer;
+    width: 55%;
+    height: 500px;
+    opacity: 1; 
+    transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
   }
 
-  .lab-card__icon {
-    @apply text-4xl mb-4;
+  .lab-bubble__shape {
+    @apply relative w-full h-full overflow-hidden shadow-sm;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .lab-card__title {
-    @apply font-sans text-xl font-bold text-brand-dark mb-3 leading-snug;
+  /* НЕЧЁТНЫЕ — слева, закруглены справа */
+  .lab-bubble:nth-child(odd) {
+    left: 0;
   }
 
-  .lab-card__desc {
-    @apply font-sans text-sm text-gray-600 leading-relaxed mb-4;
+  .lab-bubble:nth-child(odd) .lab-bubble__shape {
+    border-radius: 0 70% 70% 0 / 0 100% 100% 0;
   }
 
-  .lab-card__features {
-    @apply flex flex-wrap gap-2 pt-4 border-t border-brand-light/30;
+  /* ЧЁТНЫЕ — справа, закруглены слева */
+  .lab-bubble:nth-child(even) {
+    right: 0;
   }
 
-  .lab-card__feature {
-    @apply font-mono text-xs px-3 py-1 
-           bg-brand-light/50 text-brand-dark rounded-full;
+  .lab-bubble:nth-child(even) .lab-bubble__shape {
+    border-radius: 70% 0 0 70% / 100% 0 0 100%;
   }
 
-  /* Раскрывающийся блок */
-  .lab-card__extra {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
-                opacity 0.3s ease, 
-                margin-top 0.5s ease;
-    margin-top: 0;
+  /* Вертикальный шаг зигзага */
+  .lab-bubble:nth-child(1) { top: 0;     z-index: 7; }
+  .lab-bubble:nth-child(2) { top: 120px; z-index: 6; }
+  .lab-bubble:nth-child(3) { top: 420px; z-index: 5; }
+  .lab-bubble:nth-child(4) { top: 530px; z-index: 4; }
+  .lab-bubble:nth-child(5) { top: 830px; z-index: 3; }
+  .lab-bubble:nth-child(6) { top: 940px; z-index: 2; }
+  .lab-bubble:nth-child(7) { top: 1240px; z-index: 1; }
+
+  /* Фото */
+  .lab-bubble__img {
+    @apply w-full h-full object-cover;
+    transition: transform 0.7s ease;
   }
 
-  /* При наведении мышкой на карточку */
-  .lab-card:hover .lab-card__extra,
-  .lab-card:focus-within .lab-card__extra {
-    max-height: 400px; 
+  .lab-bubble__overlay {
+    @apply absolute inset-0 flex flex-col justify-center p-8;
+    opacity: 1; 
+    transition: opacity 0.3s ease;
+  }
+
+  /* Текст у левых фигур */
+  .lab-bubble:nth-child(odd) .lab-bubble__overlay {
+    @apply items-start text-left;
+    padding-left: 3rem;
+    padding-right: 2rem;
+    background: linear-gradient(to right, rgba(9, 29, 80, 0.9), rgba(9, 29, 80, 0.4), transparent);
+  }
+
+  /* Текст у правых фигур */
+  .lab-bubble:nth-child(even) .lab-bubble__overlay {
+    @apply items-end text-right;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    background: linear-gradient(to left, rgba(9, 29, 80, 0.9), rgba(9, 29, 80, 0.4), transparent);
+  }
+
+  .lab-bubble__title {
+    @apply font-mono text-6xl font-bold text-white mb-2;
+  }
+
+  .lab-bubble__desc {
+    @apply font-sans text-lg text-white/90 leading-snug max-w-md;
+  }
+
+ 
+
+  /* при наведении на фигуру — остальные тускнеют */
+  .labs__cascade:has(.lab-bubble:hover) .lab-bubble:not(:hover) {
+    opacity: 0.3;
+    transform: scale(0.98);
+    filter: grayscale(0.6);
+  }
+
+  /* наведённая фигура остаётся яркой и увеличивается */
+  .labs__cascade .lab-bubble:hover {
     opacity: 1;
-    margin-top: 1.5rem; 
+    transform: scale(1.05);
+    filter: grayscale(0);
+    z-index: 100;
   }
 
-  .lab-card__extra-img {
-    @apply w-full h-32 object-cover rounded-lg mb-4;
+  .labs__cascade .lab-bubble:hover .lab-bubble__img {
+    transform: scale(1.1);
+}
+
+  /* Планшеты */
+  @media (max-width: 1024px) {
+    .labs__cascade {
+      min-height: 1150px;
+    }
+
+    .lab-bubble {
+      width: 70%;
+      height: 180px;
+    }
+
+    .lab-bubble:nth-child(1) { top: 0; }
+    .lab-bubble:nth-child(2) { top: 140px; }
+    .lab-bubble:nth-child(3) { top: 280px; }
+    .lab-bubble:nth-child(4) { top: 420px; }
+    .lab-bubble:nth-child(5) { top: 560px; }
+    .lab-bubble:nth-child(6) { top: 700px; }
+    .lab-bubble:nth-child(7) { top: 840px; }
+
+    .lab-bubble__title {
+      font-size: 1.25rem;
+    }
+
+    .lab-bubble__desc {
+      font-size: 0.75rem;
+    }
   }
 
-  .lab-card__extra-text {
-    @apply font-sans text-sm text-gray-700 leading-relaxed;
+  /* Мобильные: вертикальный список */
+  @media (max-width: 640px) {
+    .labs__cascade {
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .labs__cascade .lab-bubble {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      z-index: auto;
+      width: 100%;
+      height: 180px;
+      opacity: 1;
+    }
+
+    .lab-bubble__shape {
+      border-radius: 0 60% 60% 0 / 0 100% 100% 0;
+    }
+
+    .lab-bubble__overlay {
+      opacity: 1;
+      align-items: flex-start;
+      text-align: left;
+      padding-left: 2rem;
+      padding-right: 1.5rem;
+      background: linear-gradient(to right, rgba(9, 29, 80, 0.9), rgba(9, 29, 80, 0.4), transparent);
+    }
+
+    .lab-bubble__title {
+      font-size: 1.125rem;
+    }
+
+    .lab-bubble__desc {
+      font-size: 0.75rem;
+    }
   }
 }
