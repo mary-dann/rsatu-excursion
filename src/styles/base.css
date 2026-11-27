@@ -127,11 +127,10 @@ main {
     transform: none;
     transition: none;
   }
+}
 
-  @media (max-width: 768px) {
-    .reveal { transform: translateY(50px); }
-    .reveal--left { transform: translateX(-50px); }
-    .reveal--right { transform: translateX(50px); }
-  }
-
+@media (max-width: 768px) {
+  .reveal { transform: translateY(50px); }
+  .reveal--left { transform: translateX(-50px); }
+  .reveal--right { transform: translateX(50px); }
 }
